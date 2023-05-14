@@ -1,0 +1,15 @@
+.home {
+  &__section {
+    min-height: 20em;
+    margin:0 ;
+    padding: 0 1em;
+    box-sizing: border-box;
+    & *{
+      margin-top: 0;
+    }
+  }
+  &__hero {
+    background-color: #1a84c0;
+    color: #fff;
+  }
+}
