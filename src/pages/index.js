@@ -1,6 +1,7 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
 import { Link } from "gatsby";
+import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -14,6 +15,7 @@ import {
   home__hero,
   home__heroText,
   home__heroIntro,
+  home__heroCopy,
   home__heroLinkList,
   home__skillList,
 } from "./index.module.scss";
@@ -69,8 +71,18 @@ const IndexPage = () => {
               </Link>
             </li>
           </ul>
+          <p className={home__heroCopy}>Web Developer, specializing in front-end and passionate about creativity and design 🎨. 
+          I thrive on creating captivating web experiences and collaborating with a team 🤝. 
+          Ready to craft new web experiences! 💻✨</p>
         </div>
-        <div></div>
+        <div>
+        <StaticImage
+        layout = "constrained"
+        alt="Clifford, a reddish-brown pitbull, dozing in a bean bag chair"
+        src="../images/portfolio-hero.svg"
+        placeholder="rgba(180, 180, 180, 0.7)"
+      />
+        </div>
       </section>
       <div className={home__contentContainer}>
         <section className={home__section}>

@@ -15,14 +15,20 @@
     background-color: #1a84c0;
     color: #fff;
     margin: 0;
-    height: 100vh;
+    height: calc(100vh - 3em);
     display: flex;
     align-items: center;
+    padding: 0 3em;
+    gap: 0 3em;
+    justify-content: space-between;
     &-text{
-      width: 50%;
+      width: 40%;
+    }
+    &-copy{
+      line-height: 1.8em;
     }
     &-link-list{
-      margin-top: .5em;
+      margin-top: 0;
       padding: 0;
       list-style: none;
       display: flex;
@@ -30,7 +36,8 @@
       font-size: 2em;
     }
     &-intro{
-      font-size: 4em;
+      font-size: 3.5em;
+      margin-bottom: 0.2em;
     }
     & a{
       color: #56bdec;
