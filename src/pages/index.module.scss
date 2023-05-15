@@ -1,4 +1,7 @@
 .home {
+  &__content-container{
+    background-color: #fcdd5e;
+  }
   &__section {
     min-height: 20em;
     margin:0 ;
@@ -7,14 +10,6 @@
     background-color: #fff;
     margin: 0 6em;
     padding: 1em;
-    & *{
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    & h2{
-      color: #1a84c0;
-      margin-bottom: .7em;
-    }
   }
   &__hero {
     background-color: #1a84c0;
@@ -44,9 +39,7 @@
       }
     }
   }
-  &__content-container{
-    background-color: #fcdd5e;
-  }
+
   &__skill-list{
     display: flex;
     list-style: none;

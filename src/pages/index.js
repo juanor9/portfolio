@@ -1,5 +1,6 @@
 import * as React from "react";
-import Layout from "../components/layout";
+import HomeLayout from "../components/homeLayout";
+import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -9,17 +10,17 @@ import {
 import { faFilePdf, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   home__section,
+  home__contentContainer,
   home__hero,
   home__heroText,
   home__heroIntro,
   home__heroLinkList,
-  home__contentContainer,
   home__skillList,
 } from "./index.module.scss";
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <HomeLayout>
       <section className={`${home__section} ${home__hero}`}>
         <div className={home__heroText}>
           <p className={home__heroIntro}>
@@ -27,7 +28,11 @@ const IndexPage = () => {
           </p>
           <ul className={home__heroLinkList}>
             <li>
-              <a href="https://github.com/juanor9" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/juanor9"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
@@ -41,14 +46,27 @@ const IndexPage = () => {
               </a>
             </li>
             <li>
-              <a href="https://www.behance.net/juan_o" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faBehance} /></a>
-              
+              <a
+                href="https://www.behance.net/juan_o"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faBehance} />
+              </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={faFilePdf} />
+              <a
+                href="https://res.cloudinary.com/dzevguevc/image/upload/v1684151725/Juan_Camilo_Orjuela_en_j342cs.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faFilePdf} />
+              </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <Link to="/contact">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </Link>
             </li>
           </ul>
         </div>
@@ -67,13 +85,20 @@ const IndexPage = () => {
             <li>React.js</li>
             <li>Node.js</li>
             <li>Express.js</li>
+            <li>Redux Toolkit</li>
+            <li>auth0</li>
             <li>Gatsby</li>
             <li>Django</li>
             <li>MySQL</li>
             <li>MongoDB</li>
+            <li>Mongoose</li>
             <li>GraphQL</li>
             <li>SQLite</li>
             <li>Wordpress</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Jira</li>
+            <li>Scrum</li>
           </ul>
         </section>
         <section className={home__section}>
@@ -83,7 +108,7 @@ const IndexPage = () => {
           <h2>Contact</h2>
         </section>
       </div>
-    </Layout>
+    </HomeLayout>
   );
 };
 

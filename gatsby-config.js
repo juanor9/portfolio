@@ -26,15 +26,15 @@ module.exports = {
       },
       __key: "images",
     },
-    {
-      resolve: `gatsby-plugin-i18n`,
-      options: {
-        langKeyDefault: "en",
-        langKeyForNull: "en",
-        prefixDefault: false,
-        useLangKeyLayout: false,
-        pagesPaths: ["/src/pages"],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-i18n`,
+    //   options: {
+    //     langKeyDefault: "en",
+    //     langKeyForNull: "en",
+    //     prefixDefault: false,
+    //     useLangKeyLayout: false,
+    //     pagesPaths: ["/src/pages"],
+    //   },
+    // },
   ],
 };

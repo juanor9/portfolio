@@ -1,17 +1,14 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import {
-  header,
-  header__homeLink,
+import { header, 
   header__navbar,
-  contentContainer,
-  contentContainer__content,
-} from "./layout.module.scss";
+  header__homeLink,
+ } from "./layout.module.scss";
 
-const Layout = ({ children }) => {
+const HomeLayout = ({ children }) => {
   return (
     <div>
-      <header className={header}>
+       <header className={header}>
         <div>
           <h1><Link to="/" className={header__homeLink}>Juan Camilo Orjuela</Link></h1>
         </div>
@@ -32,10 +29,10 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <main className={contentContainer}>
-        <div className={contentContainer__content}>{children}</div>
-      </main>
-      <footer>
+      <main>
+{children}
+        </main>
+        <footer>
         <section>
           <p>
             <b>Juan Camilo Orjuela</b>
@@ -64,4 +61,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default HomeLayout;
