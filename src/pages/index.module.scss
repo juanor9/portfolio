@@ -4,12 +4,59 @@
     margin:0 ;
     padding: 0 1em;
     box-sizing: border-box;
+    background-color: #fff;
+    margin: 0 6em;
+    padding: 1em;
     & *{
       margin-top: 0;
+      margin-bottom: 0;
+    }
+    & h2{
+      color: #1a84c0;
+      margin-bottom: .7em;
     }
   }
   &__hero {
     background-color: #1a84c0;
     color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    &-text{
+      width: 50%;
+    }
+    &-link-list{
+      margin-top: .5em;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      font-size: 2em;
+    }
+    &-intro{
+      font-size: 4em;
+    }
+    & a{
+      color: #56bdec;
+      &:hover{
+        color: #fff
+      }
+    }
+  }
+  &__content-container{
+    background-color: #fcdd5e;
+  }
+  &__skill-list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 1em;
+    & li{
+      background-color: #fcdd5e;
+      padding: .5em;
+    }
+
   }
 }

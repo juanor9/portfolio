@@ -1,5 +1,5 @@
 import * as React from "react";
-import { header, header__navbar, main } from "./layout.module.scss";
+import { header, header__navbar } from "./layout.module.scss";
 
 const Layout = ({ children }) => {
   return (
@@ -7,7 +7,6 @@ const Layout = ({ children }) => {
       <header className={header}>
         <div>
           <h1>Juan Camilo Orjuela</h1>
-          <p>Web developer</p>
         </div>
         <nav>
           <ul className={header__navbar}>
@@ -18,10 +17,10 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <main className={main}>{children}</main>
+      <main>{children}</main>
       <footer>
         <section>
-          <p>Juan Camilo Orjuela</p>
+          <p><b>Juan Camilo Orjuela</b></p>
           <p>© 2023, Built and designed by Juan Camilo Orjuela</p>
         </section>
         <section>
