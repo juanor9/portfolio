@@ -1,12 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,900;1,300;1,600&display=swap");
+
+@mixin break($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  font-size: 18px;
+  @include break(768px) {
+    font-size: 16px;
+  }
   & h2 {
     color: #1a84c0;
     margin-bottom: 1em;
+  }
+  & p{
+    line-height: 1.5em;
+    @include break(768px) {
+      line-height: 1.8em;
+    }
+  }
+  & ul{
+    padding: 0 1.3em;
   }
 }
 
@@ -21,11 +40,30 @@ body {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 0.5em;
+    line-height: 0;
+    @include break(768px) {
+      font-size: 16px;
+    }
   }
   &__navbar {
     display: flex;
     list-style: none;
-    gap: 1em;
+    gap: .2em;
+    flex-direction: column;
+    font-size: 0.8em;
+    padding: 0;
+    @include break(768px) {
+      flex-direction: row;
+      gap: 1em;
+      font-size: 1em;
+    }
+    & li{
+      text-align: right;
+      @include break(768px){
+        text-align: left;
+      }
+    }
     & a {
       color: #fff;
       text-decoration: none;
