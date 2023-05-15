@@ -56,6 +56,20 @@ const HomeLayout = ({ children }) => {
             </li>
           </ul>
         </section>
+        <section>
+          <p>Social Media</p>
+          <ul>
+            <li>
+              <Link to="/">GitHub</Link>
+            </li>
+            <li>
+              <Link to="/">Linkedin</Link>
+            </li>
+            <li>
+              <Link to="/">Behance</Link>
+            </li>
+          </ul>
+        </section>
       </footer>
     </div>
   );

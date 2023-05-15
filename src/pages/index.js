@@ -1,7 +1,7 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
 import { Link } from "gatsby";
-import { StaticImage } from 'gatsby-plugin-image'
+import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -17,7 +17,8 @@ import {
   home__heroIntro,
   home__heroCopy,
   home__heroLinkList,
-  home__skillList,
+  home__skills,
+  home__skillsList
 } from "./index.module.scss";
 
 const IndexPage = () => {
@@ -26,7 +27,7 @@ const IndexPage = () => {
       <section className={`${home__section} ${home__hero}`}>
         <div className={home__heroText}>
           <p className={home__heroIntro}>
-            Hi, I'm Juan Camilo Orjuela, web developer
+            Hi, I'm Juan Camilo Orjuela, web developer.
           </p>
           <ul className={home__heroLinkList}>
             <li>
@@ -71,47 +72,67 @@ const IndexPage = () => {
               </Link>
             </li>
           </ul>
-          <p className={home__heroCopy}>Web Developer, specializing in front-end and passionate about creativity and design 🎨. 
-          I thrive on creating captivating web experiences and collaborating with a team 🤝. 
-          Ready to craft new web experiences! 💻✨</p>
+          <p className={home__heroCopy}>
+            Web Developer, specializing in front-end and passionate about
+            creativity and design 🎨. I thrive on creating captivating web
+            experiences and collaborating with a team 🤝. Ready to craft new web
+            experiences! 💻✨
+          </p>
         </div>
         <div>
-        <StaticImage
-        layout = "constrained"
-        alt="Clifford, a reddish-brown pitbull, dozing in a bean bag chair"
-        src="../images/portfolio-hero.svg"
-        placeholder="rgba(180, 180, 180, 0.7)"
-      />
+          <StaticImage
+            layout="constrained"
+            alt="Web developer illustration"
+            src="../images/portfolio-hero.svg"
+            placeholder="rgba(180, 180, 180, 0.7)"
+          />
         </div>
       </section>
       <div className={home__contentContainer}>
         <section className={home__section}>
           <h2>My Skills</h2>
-          <ul className={home__skillList}>
-            <li>Javascript</li>
-            <li>Typescript</li>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SASS</li>
-            <li>React.js</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>Redux Toolkit</li>
-            <li>auth0</li>
-            <li>Gatsby</li>
-            <li>Django</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li>Mongoose</li>
-            <li>GraphQL</li>
-            <li>SQLite</li>
-            <li>Wordpress</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>Jira</li>
-            <li>Scrum</li>
-          </ul>
+          <article className={home__skills}>
+            <div>
+              <StaticImage
+                alt="Juan Camilo Orjuela"
+                src="https://res.cloudinary.com/dzevguevc/image/upload/q_100,r_1000/v1684179459/IMG_4997_chhb5r.png"
+                placeholder="#fff"
+              />
+            </div>
+            <div>
+              <ul className={home__skillsList}>
+                <li>Javascript</li>
+                <li>Typescript</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SASS</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Redux Toolkit</li>
+                <li>auth0</li>
+                <li>Gatsby</li>
+                <li>Django</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>Mongoose</li>
+                <li>GraphQL</li>
+                <li>SQLite</li>
+                <li>Wordpress</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Jira</li>
+                <li>Scrum</li>
+              </ul>
+              <article>
+              <h3>Building Technological Connections: My Passion as Web Developer</h3>
+              <p>Imagine a world where technology becomes a transformative experience. As a web developer, I dive into this captivating world. My focus on front-end development and my ability to merge aesthetics and functionality elevate every project. But beyond my technical skills, my motivation lies in being part of a collaborative team where we overcome challenges and bring innovative ideas to life. I am always ready to learn and adapt to the latest trends, seeking personal growth in an environment that values creativity and positive impact on people's lives.</p>
+              <Link to="/about">More about me</Link>
+              </article>
+              
+            </div>
+          </article>
         </section>
         <section className={home__section}>
           <h2>Projects</h2>
