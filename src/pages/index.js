@@ -1,6 +1,6 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -22,7 +22,7 @@ import {
   home__skillsList
 } from "./index.module.scss";
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
   return (
     <HomeLayout>
       <section className={`${home__section} ${home__hero}`}>
@@ -137,6 +137,21 @@ const IndexPage = () => {
         </section>
         <section className={home__section}>
           <h2>Projects</h2>
+          <article>
+          {
+        data.allMdx.nodes.map((node) => (
+          <article key={node.id}>
+            <h2>
+              <Link to={`/blog/${node.frontmatter.slug}`}>
+                {node.frontmatter.title}
+              </Link>
+            </h2>
+            <p>{node.excerpt}</p>
+            <p>Posted: {node.frontmatter.date}</p>
+          </article>
+        ))
+      }
+          </article>
         </section>
         <section className={home__section}>
           <h2>Contact</h2>
@@ -145,6 +160,25 @@ const IndexPage = () => {
     </HomeLayout>
   );
 };
+
+export const query = graphql`
+query {
+  allMdx(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      excerpt
+      id
+      frontmatter {
+        date
+        hero_image_alt
+        hero_image_credit_link
+        hero_image_credit_text
+        slug
+        title
+      }
+    }
+  }
+}
+`
 
 export default IndexPage;
 
