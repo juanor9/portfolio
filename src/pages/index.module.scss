@@ -13,10 +13,10 @@
     margin: 0;
     box-sizing: border-box;
     background-color: #fff;
-    margin: 0 6em;
-    padding: 0 1em;
+    padding: 1em;
     @include break(768px) {
       padding: 1em 3em;
+      margin: 0 6em;
     }
   }
   &__hero {
@@ -26,15 +26,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0 3em;
+    gap: 0 1em;
     justify-content: space-between;
-    @include break(768px) {
-      height: calc(100vh - 3em);
-      padding: 0 3em;
+    @include break(1000px){
+      min-height: calc(100vh - 3em);
       flex-direction: row;
+      padding: 0 3em;
     }
     &-text {
-      @include break(768px){
+      width: 100%;
+      @include break(1000px){
         width: 40%;
       }
     }
@@ -47,7 +48,12 @@
       list-style: none;
       display: flex;
       gap: 1em;
-      font-size: 2em;
+      font-size: 1.7em;
+      flex-wrap: wrap;
+      
+      @include break(768px){
+        font-size: 2em;
+      }
     }
     &-intro {
       margin-bottom: 0.2em;
@@ -67,13 +73,28 @@
   &__skills {
     display: flex;
     gap: 2em;
+    flex-direction: column;
+    @include break(1000px){
+      flex-direction: row;
+    }
+    &-picture{
+      width: 70%;
+      margin: auto;
+      @include break(1000px){
+        width: 100%;
+      }
+    }
     &-list {
-      font-size: 0.8em;
+      font-size: 0.7em;
       display: flex;
       list-style: none;
       padding: 0;
       flex-wrap: wrap;
       gap: 0.8em;
+      justify-content: center;
+      @include break(768px){
+        font-size: 0.8em;
+      }
       & li {
         background-color: #fcdd5e;
         padding: 0.5em;

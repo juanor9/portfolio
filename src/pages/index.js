@@ -18,6 +18,7 @@ import {
   home__heroCopy,
   home__heroLinkList,
   home__skills,
+  home__skillsPicture,
   home__skillsList
 } from "./index.module.scss";
 
@@ -92,7 +93,7 @@ const IndexPage = () => {
         <section className={home__section}>
           <h2>My Skills</h2>
           <article className={home__skills}>
-            <div>
+            <div className={home__skillsPicture}>
               <StaticImage
                 alt="Juan Camilo Orjuela"
                 src="https://res.cloudinary.com/dzevguevc/image/upload/q_100,r_1000/v1684179459/IMG_4997_chhb5r.png"

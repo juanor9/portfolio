@@ -75,7 +75,10 @@ body {
 }
 .content-container {
   background-color: #fcdd5e;
-  padding: 0 6em;
+  padding: 0;
+  @include break(768px){
+    padding: 0 6em;
+  }
   &__content {
     background-color: #fff;
     padding: 1em 2em;
@@ -88,7 +91,12 @@ footer {
   padding: 1em;
   display: flex;
   justify-content: space-around;
-  font-size: .8em;
+  font-size: .6em;
+  flex-direction: column;
+  @include break(768px){
+    font-size: .8em;
+    flex-direction: row;
+  }
   & a {
     color: #fff;
     text-decoration: none;
