@@ -1,7 +1,7 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
 import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -19,10 +19,10 @@ import {
   home__heroLinkList,
   home__skills,
   home__skillsPicture,
-  home__skillsList
+  home__skillsList,
 } from "./index.module.scss";
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   return (
     <HomeLayout>
       <section className={`${home__section} ${home__hero}`}>
@@ -127,30 +127,63 @@ const IndexPage = ({data}) => {
                 <li>Scrum</li>
               </ul>
               <article>
-              <h3>Building Technological Connections: My Passion as Web Developer</h3>
-              <p>Imagine a world where technology becomes a transformative experience. As a web developer, I dive into this captivating world. My focus on front-end development and my ability to merge aesthetics and functionality elevate every project. But beyond my technical skills, my motivation lies in being part of a collaborative team where we overcome challenges and bring innovative ideas to life. I am always ready to learn and adapt to the latest trends, seeking personal growth in an environment that values creativity and positive impact on people's lives.</p>
-              <Link to="/about">More about me</Link>
+                <h3>
+                  Building Technological Connections: My Passion as Web
+                  Developer
+                </h3>
+                <p>
+                  Imagine a world where technology becomes a transformative
+                  experience. As a web developer, I dive into this captivating
+                  world. My focus on front-end development and my ability to
+                  merge aesthetics and functionality elevate every project. But
+                  beyond my technical skills, my motivation lies in being part
+                  of a collaborative team where we overcome challenges and bring
+                  innovative ideas to life. I am always ready to learn and adapt
+                  to the latest trends, seeking personal growth in an
+                  environment that values creativity and positive impact on
+                  people's lives.
+                </p>
+                <Link to="/about">More about me</Link>
               </article>
-              
             </div>
           </article>
         </section>
         <section className={home__section}>
           <h2>Projects</h2>
           <article>
-          {
-        data.allMdx.nodes.map((node) => (
-          <article key={node.id}>
-            <h2>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
-                {node.frontmatter.title}
-              </Link>
-            </h2>
-            <p>{node.excerpt}</p>
-            <p>Posted: {node.frontmatter.date}</p>
-          </article>
-        ))
-      }
+            {data.allMdx.nodes.map((node) => {
+              const image = getImage(node.frontmatter.main_image);
+              console.log(
+                "🚀 ~ file: index.js:144 ~ data.allMdx.nodes.map ~ node.frontmatter.main_image:",
+                node.frontmatter.main_image
+              );
+              console.log(
+                "🚀 ~ file: index.js:144 ~ data.allMdx.nodes.map ~ image:",
+                image
+              );
+
+              return (
+                <article key={node.id}>
+                  <h2>
+                    <Link to={`/blog/${node.frontmatter.slug}`}>
+                      {node.frontmatter.title}
+                    </Link>
+                  </h2>
+                  <p>{node.excerpt}</p>
+                  <GatsbyImage image={image} alt={node.frontmatter.title} />
+                  <p>
+                    <a
+                      href={node.frontmatter.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Live
+                    </a>
+                  </p>
+                  <p>Posted: {node.frontmatter.date}</p>
+                </article>
+              );
+            })}
           </article>
         </section>
         <section className={home__section}>
@@ -162,23 +195,26 @@ const IndexPage = ({data}) => {
 };
 
 export const query = graphql`
-query {
-  allMdx(sort: {frontmatter: {date: DESC}}) {
-    nodes {
-      excerpt
-      id
-      frontmatter {
-        date
-        hero_image_alt
-        hero_image_credit_link
-        hero_image_credit_text
-        slug
-        title
+  query {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        excerpt
+        id
+        frontmatter {
+          date(formatString: "DD, MMMM, YYYY")
+          link
+          main_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          slug
+          title
+        }
       }
     }
   }
-}
-`
+`;
 
 export default IndexPage;
 

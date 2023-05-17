@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 // import Seo from '../../components/seo'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const ProjectsPage = ({data}) => {
   return (
@@ -17,6 +18,8 @@ const ProjectsPage = ({data}) => {
               </Link>
             </h2>
             <p>{node.excerpt}</p>
+            <a href={node.frontmatter.link} target="_blank"
+                rel="noreferrer">Live</a>
             <p>Posted: {node.frontmatter.date}</p>
           </article>
         ))
@@ -31,10 +34,13 @@ query {
       excerpt
       id
       frontmatter {
-        date
-        hero_image_alt
-        hero_image_credit_link
-        hero_image_credit_text
+        date(formatString: "DD, MMMM, YYYY")
+        link
+        main_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         slug
         title
       }
