@@ -12,11 +12,11 @@ const ProjectsPage = ({data}) => {
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
-            <h2>
+            <h3>
               <Link to={`/blog/${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
               </Link>
-            </h2>
+            </h3>
             <p>{node.excerpt}</p>
             <a href={node.frontmatter.link} target="_blank"
                 rel="noreferrer">Live</a>

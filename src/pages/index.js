@@ -153,24 +153,18 @@ const IndexPage = ({ data }) => {
           <article>
             {data.allMdx.nodes.map((node) => {
               const image = getImage(node.frontmatter.main_image);
-              console.log(
-                "🚀 ~ file: index.js:144 ~ data.allMdx.nodes.map ~ node.frontmatter.main_image:",
-                node.frontmatter.main_image
-              );
-              console.log(
-                "🚀 ~ file: index.js:144 ~ data.allMdx.nodes.map ~ image:",
-                image
-              );
-
               return (
                 <article key={node.id}>
-                  <h2>
+                  <h3>
                     <Link to={`/blog/${node.frontmatter.slug}`}>
                       {node.frontmatter.title}
                     </Link>
-                  </h2>
-                  <p>{node.excerpt}</p>
+                  </h3>
                   <GatsbyImage image={image} alt={node.frontmatter.title} />
+                  {node.frontmatter.skills
+                    ? <ul className={home__skillsList}>{node.frontmatter.skills.map((skill) => <li>{skill}</li>)}</ul>
+                    : null}
+                  <p>{node.frontmatter.short_intro}</p>
                   <p>
                     <a
                       href={node.frontmatter.link}
@@ -178,6 +172,13 @@ const IndexPage = ({ data }) => {
                       rel="noreferrer"
                     >
                       Live
+                    </a>{" "}
+                    <a
+                      href={node.frontmatter.github_link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GitHub
                     </a>
                   </p>
                   <p>Posted: {node.frontmatter.date}</p>
@@ -198,16 +199,18 @@ export const query = graphql`
   query {
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        excerpt
         id
         frontmatter {
           date(formatString: "DD, MMMM, YYYY")
+          github_link
           link
           main_image {
             childImageSharp {
               gatsbyImageData
             }
           }
+          short_intro
+          skills
           slug
           title
         }
