@@ -24,9 +24,6 @@ const Layout = ({ children }) => {
               <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
@@ -50,9 +47,6 @@ const Layout = ({ children }) => {
             </li>
             <li>
               <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

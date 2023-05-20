@@ -28,14 +28,14 @@
     align-items: center;
     gap: 0 1em;
     justify-content: space-between;
-    @include break(1000px){
+    @include break(1000px) {
       min-height: calc(100vh - 3em);
       flex-direction: row;
       padding: 0 3em;
     }
     &-text {
       width: 100%;
-      @include break(1000px){
+      @include break(1000px) {
         width: 40%;
       }
     }
@@ -50,8 +50,8 @@
       gap: 1em;
       font-size: 1.7em;
       flex-wrap: wrap;
-      
-      @include break(768px){
+
+      @include break(768px) {
         font-size: 2em;
       }
     }
@@ -74,13 +74,13 @@
     display: flex;
     gap: 2em;
     flex-direction: column;
-    @include break(1000px){
+    @include break(1000px) {
       flex-direction: row;
     }
-    &-picture{
+    &-picture {
       width: 70%;
       margin: auto;
-      @include break(1000px){
+      @include break(1000px) {
         width: 100%;
       }
     }
@@ -92,12 +92,72 @@
       flex-wrap: wrap;
       gap: 0.8em;
       justify-content: center;
-      @include break(768px){
+      @include break(768px) {
+        font-size: 0.8em;
+      }
+    }
+    & li {
+      background-color: #fcdd5e;
+      padding: 0.5em;
+    }
+  }
+  &__projects {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      gap: 2em;
+      @include break(1000px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        & article {
+          width: calc(50% - 2em);
+        }
+      }
+    }
+    &-title{
+      text-decoration: none;
+
+    }
+    &-buttons{
+      text-decoration: none;
+      color: #202426;
+      background-color: #fcdd5e;
+      flex-grow: 1;
+      padding: .3em;
+      text-align: center;
+      line-height: 1.2em;
+      &:hover{
+        background-color: #202426;
+        color: #fff;
+      }
+      &-container{
+        display: flex;
+        justify-content: space-around;
+        gap: .3em;
+        flex-direction: column;
+        @include break(786px){
+          flex-direction: row;
+          gap: 1em;
+        }
+      }
+    }
+    &-skills {
+      font-size: 0.7em;
+      display: flex;
+      list-style: none;
+      padding: 0;
+      flex-wrap: wrap;
+      gap: 0.8em;
+      justify-content: left;
+      @include break(768px) {
         font-size: 0.8em;
       }
       & li {
-        background-color: #fcdd5e;
-        padding: 0.5em;
+        background-color: #202426;
+        padding: 0.3em;
+        color: #fff;
       }
     }
   }

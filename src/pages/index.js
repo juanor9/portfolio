@@ -20,6 +20,10 @@ import {
   home__skills,
   home__skillsPicture,
   home__skillsList,
+  home__projectsContainer,
+  home__projectsSkills,
+  home__projectsButtonsContainer,
+  home__projectsButtons,
 } from "./index.module.scss";
 
 const IndexPage = ({ data }) => {
@@ -150,35 +154,43 @@ const IndexPage = ({ data }) => {
         </section>
         <section className={home__section}>
           <h2>Projects</h2>
-          <article>
+          <article className={home__projectsContainer}>
             {data.allMdx.nodes.map((node) => {
               const image = getImage(node.frontmatter.main_image);
               return (
                 <article key={node.id}>
-                  <h3>
-                    <Link to={`/blog/${node.frontmatter.slug}`}>
-                      {node.frontmatter.title}
-                    </Link>
-                  </h3>
+                  <h3>{node.frontmatter.title}</h3>
                   <GatsbyImage image={image} alt={node.frontmatter.title} />
-                  {node.frontmatter.skills
-                    ? <ul className={home__skillsList}>{node.frontmatter.skills.map((skill) => <li>{skill}</li>)}</ul>
-                    : null}
+                  {node.frontmatter.skills ? (
+                    <ul className={home__projectsSkills}>
+                      {node.frontmatter.skills.map((skill) => (
+                        <li>{skill}</li>
+                      ))}
+                    </ul>
+                  ) : null}
                   <p>{node.frontmatter.short_intro}</p>
-                  <p>
+                  <p className={home__projectsButtonsContainer}>
+                    <Link
+                      to={`/blog/${node.frontmatter.slug}`}
+                      className={home__projectsButtons}
+                    >
+                      Know more
+                    </Link>
                     <a
+                      className={home__projectsButtons}
                       href={node.frontmatter.link}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Live
+                      Live demo
                     </a>{" "}
                     <a
+                      className={home__projectsButtons}
                       href={node.frontmatter.github_link}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      GitHub
+                      GitHub repository
                     </a>
                   </p>
                   <p>Posted: {node.frontmatter.date}</p>
@@ -197,7 +209,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC } }) {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: 4) {
       nodes {
         id
         frontmatter {
