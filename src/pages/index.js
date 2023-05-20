@@ -159,41 +159,45 @@ const IndexPage = ({ data }) => {
               const image = getImage(node.frontmatter.main_image);
               return (
                 <article key={node.id}>
-                  <h3>{node.frontmatter.title}</h3>
-                  <GatsbyImage image={image} alt={node.frontmatter.title} />
-                  {node.frontmatter.skills ? (
-                    <ul className={home__projectsSkills}>
-                      {node.frontmatter.skills.map((skill) => (
-                        <li>{skill}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  <p>{node.frontmatter.short_intro}</p>
-                  <p className={home__projectsButtonsContainer}>
-                    <Link
-                      to={`/blog/${node.frontmatter.slug}`}
-                      className={home__projectsButtons}
-                    >
-                      Know more
-                    </Link>
-                    <a
-                      className={home__projectsButtons}
-                      href={node.frontmatter.link}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Live demo
-                    </a>{" "}
-                    <a
-                      className={home__projectsButtons}
-                      href={node.frontmatter.github_link}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub repository
-                    </a>
-                  </p>
-                  <p>Posted: {node.frontmatter.date}</p>
+                  <div>
+                    <h3>{node.frontmatter.title}</h3>
+                    <GatsbyImage image={image} alt={node.frontmatter.title} />
+                    {node.frontmatter.skills ? (
+                      <ul className={home__projectsSkills}>
+                        {node.frontmatter.skills.map((skill) => (
+                          <li>{skill}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                    <p>{node.frontmatter.short_intro}</p>
+                  </div>
+                  <div>
+                    <p className={home__projectsButtonsContainer}>
+                      <Link
+                        to={`/blog/${node.frontmatter.slug}`}
+                        className={home__projectsButtons}
+                      >
+                        Know more
+                      </Link>
+                      <a
+                        className={home__projectsButtons}
+                        href={node.frontmatter.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Live demo
+                      </a>{" "}
+                      <a
+                        className={home__projectsButtons}
+                        href={node.frontmatter.github_link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        GitHub repository
+                      </a>
+                    </p>
+                    <p>Posted: {node.frontmatter.date}</p>
+                  </div>
                 </article>
               );
             })}
@@ -224,6 +228,7 @@ export const query = graphql`
           short_intro
           skills
           slug
+
           title
         }
       }
