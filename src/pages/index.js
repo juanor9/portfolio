@@ -21,6 +21,7 @@ import {
   home__skillsPicture,
   home__skillsList,
   home__projectsContainer,
+  home__projectsCard,
   home__projectsSkills,
   home__projectsButtonsContainer,
   home__projectsButtons,
@@ -158,7 +159,7 @@ const IndexPage = ({ data }) => {
             {data.allMdx.nodes.map((node) => {
               const image = getImage(node.frontmatter.main_image);
               return (
-                <article key={node.id}>
+                <article key={node.id} className={home__projectsCard}>
                   <div>
                     <h3>{node.frontmatter.title}</h3>
                     <GatsbyImage image={image} alt={node.frontmatter.title} />
@@ -174,7 +175,7 @@ const IndexPage = ({ data }) => {
                   <div>
                     <p className={home__projectsButtonsContainer}>
                       <Link
-                        to={`/blog/${node.frontmatter.slug}`}
+                        to={`/projects/${node.frontmatter.slug}`}
                         className={home__projectsButtons}
                       >
                         Know more
@@ -205,6 +206,8 @@ const IndexPage = ({ data }) => {
         </section>
         <section className={home__section}>
           <h2>Contact</h2>
+          <article>email</article>
+          <article>form</article>
         </section>
       </div>
     </HomeLayout>
