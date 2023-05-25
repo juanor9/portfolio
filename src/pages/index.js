@@ -25,6 +25,8 @@ import {
   home__projectsSkills,
   home__projectsButtonsContainer,
   home__projectsButtons,
+  home__contact,
+  home__contactImage,
 } from "./index.module.scss";
 
 const IndexPage = ({ data }) => {
@@ -73,9 +75,13 @@ const IndexPage = ({ data }) => {
               </a>
             </li>
             <li>
-              <Link to="/contact">
+              <a
+                href="mailto: orjuela9@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faEnvelope} />
-              </Link>
+              </a>
             </li>
           </ul>
           <p className={home__heroCopy}>
@@ -206,8 +212,41 @@ const IndexPage = ({ data }) => {
         </section>
         <section className={home__section}>
           <h2>Contact</h2>
-          <article>email</article>
-          <article>form</article>
+          <div className={home__contact}>
+            <article>
+              <StaticImage
+                className={home__contactImage}
+                layout="constrained"
+                alt="Coffee cup"
+                src="../images/coffee.svg"
+              />
+              <p>
+                Reach out to me and let's chat! Looking forward to connecting
+                with you. 😊
+              </p>
+              <a
+                href="mailto: orjuela9@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Send me an email
+              </a>
+            </article>
+            <article>
+              <p>Or... you could just use this form to start a conversation.</p>
+              <form style={{ width: "100%" }}>
+                <label>
+                  Email
+                  <input type="text" />
+                </label>
+                <label>
+                  Message
+                  <textarea rows="10" />
+                </label>
+                <button type="submit">Send</button>
+              </form>
+            </article>
+          </div>
         </section>
       </div>
     </HomeLayout>
