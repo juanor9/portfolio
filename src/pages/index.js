@@ -1,5 +1,6 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
+import ContactForm from "../components/ContactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -234,17 +235,7 @@ const IndexPage = ({ data }) => {
             </article>
             <article>
               <p>Or... you could just use this form to start a conversation.</p>
-              <form style={{ width: "100%" }}>
-                <label>
-                  Email
-                  <input type="text" />
-                </label>
-                <label>
-                  Message
-                  <textarea rows="10" />
-                </label>
-                <button type="submit">Send</button>
-              </form>
+              <ContactForm />
             </article>
           </div>
         </section>
