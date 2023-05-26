@@ -1,6 +1,6 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
-import ContactForm from "../components/contactForm/contactForm";
+import ContactForm from "../components/contactForm/ContactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
