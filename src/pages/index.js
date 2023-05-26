@@ -207,10 +207,12 @@ const IndexPage = ({ data }) => {
         </section>
         <section className={home__section}>
           <h2>Contact</h2>
-          <div className={home__contact}>
+          <div 
+          // className={home__contact}
+          >
             <article>
               <StaticImage
-                className={home__contactImage}
+                // className={home__contactImage}
                 layout="constrained"
                 alt="Coffee cup"
                 src="../images/coffee.svg"
