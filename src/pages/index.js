@@ -1,5 +1,6 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
+import ContactForm from "../components/ContactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -165,8 +166,8 @@ const IndexPage = ({ data }) => {
                     <GatsbyImage image={image} alt={node.frontmatter.title} />
                     {node.frontmatter.skills ? (
                       <ul className={home__projectsSkills}>
-                        {node.frontmatter.skills.map((skill) => (
-                          <li>{skill}</li>
+                        {node.frontmatter.skills.map((skill, index) => (
+                          <li key={index}>{skill}</li>
                         ))}
                       </ul>
                     ) : null}
@@ -206,8 +207,31 @@ const IndexPage = ({ data }) => {
         </section>
         <section className={home__section}>
           <h2>Contact</h2>
-          <article>email</article>
-          <article>form</article>
+          <div className={home__contact}>
+            <article>
+              <StaticImage
+                className={home__contactImage}
+                layout="constrained"
+                alt="Coffee cup"
+                src="../images/coffee.svg"
+              />
+              <p>
+                Reach out to me and let's chat! Looking forward to connecting
+                with you. 😊
+              </p>
+              <a
+                href="mailto: orjuela9@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Send me an email
+              </a>
+            </article>
+            <article>
+              <p>Or... you could just use this form to start a conversation.</p>
+              <ContactForm/>
+            </article>
+          </div>
         </section>
       </div>
     </HomeLayout>
