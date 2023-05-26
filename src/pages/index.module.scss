@@ -170,4 +170,23 @@
       }
     }
   }
+  &__contact{
+    display: flex;
+    gap: 2em;
+    & article{
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      width: calc(50% - 1em);
+      align-items: center;
+      justify-content: center;
+    }
+    &-image{
+      width: 40%;
+    }
+    & label{
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

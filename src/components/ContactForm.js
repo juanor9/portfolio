@@ -8,6 +8,7 @@ const ContactForm = () => {
         <input name="email" id="email" type="email"/>
       </label>
       <label htmlFor="message">
+        Message
         <textarea name="message" id="message" rows="15"/>
       </label>
       <button type="submit">Submit</button>

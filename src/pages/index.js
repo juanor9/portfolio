@@ -26,6 +26,8 @@ import {
   home__projectsSkills,
   home__projectsButtonsContainer,
   home__projectsButtons,
+  home__contact,
+  home__contactImage,
 } from "./index.module.scss";
 
 const IndexPage = ({ data }) => {
@@ -208,11 +210,11 @@ const IndexPage = ({ data }) => {
         <section className={home__section}>
           <h2>Contact</h2>
           <div 
-          // className={home__contact}
+          className={home__contact}
           >
             <article>
               <StaticImage
-                // className={home__contactImage}
+                className={home__contactImage}
                 layout="constrained"
                 alt="Coffee cup"
                 src="../images/coffee.svg"
