@@ -26,8 +26,6 @@ import {
   home__projectsSkills,
   home__projectsButtonsContainer,
   home__projectsButtons,
-  home__contact,
-  home__contactImage,
 } from "./index.module.scss";
 
 const IndexPage = ({ data }) => {
@@ -76,13 +74,9 @@ const IndexPage = ({ data }) => {
               </a>
             </li>
             <li>
-              <a
-                href="mailto: orjuela9@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <Link to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} />
-              </a>
+              </Link>
             </li>
           </ul>
           <p className={home__heroCopy}>
@@ -172,8 +166,8 @@ const IndexPage = ({ data }) => {
                     <GatsbyImage image={image} alt={node.frontmatter.title} />
                     {node.frontmatter.skills ? (
                       <ul className={home__projectsSkills}>
-                        {node.frontmatter.skills.map((skill) => (
-                          <li>{skill}</li>
+                        {node.frontmatter.skills.map((skill, index) => (
+                          <li key={index}>{skill}</li>
                         ))}
                       </ul>
                     ) : null}
@@ -235,7 +229,7 @@ const IndexPage = ({ data }) => {
             </article>
             <article>
               <p>Or... you could just use this form to start a conversation.</p>
-              <ContactForm />
+              <ContactForm/>
             </article>
           </div>
         </section>

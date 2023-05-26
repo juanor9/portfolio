@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 // import Seo from '../../components/seo'
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+// import { GatsbyImage } from 'gatsby-plugin-image'
 
 const ProjectsPage = ({data}) => {
   return (
