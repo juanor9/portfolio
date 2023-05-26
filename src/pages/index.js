@@ -1,5 +1,6 @@
 import * as React from "react";
 import HomeLayout from "../components/homeLayout";
+import ContactForm from "../components/contactForm/contactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -171,8 +172,8 @@ const IndexPage = ({ data }) => {
                     <GatsbyImage image={image} alt={node.frontmatter.title} />
                     {node.frontmatter.skills ? (
                       <ul className={home__projectsSkills}>
-                        {node.frontmatter.skills.map((skill) => (
-                          <li>{skill}</li>
+                        {node.frontmatter.skills.map((skill, index) => (
+                          <li key={index}>{skill}</li>
                         ))}
                       </ul>
                     ) : null}
@@ -234,17 +235,7 @@ const IndexPage = ({ data }) => {
             </article>
             <article>
               <p>Or... you could just use this form to start a conversation.</p>
-              <form style={{ width: "100%" }}>
-                <label>
-                  Email
-                  <input type="text" />
-                </label>
-                <label>
-                  Message
-                  <textarea rows="10" />
-                </label>
-                <button type="submit">Send</button>
-              </form>
+              <ContactForm />
             </article>
           </div>
         </section>

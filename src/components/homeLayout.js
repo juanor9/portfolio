@@ -6,6 +6,7 @@ import { header,
  } from "./layout.module.scss";
 
 const HomeLayout = ({ children }) => {
+  
   return (
     <div>
        <header className={header}>
