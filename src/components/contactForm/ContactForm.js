@@ -7,7 +7,7 @@ const ContactForm = () => {
     <form
       style={{ width: "100%" }}
       className="kwes-form"
-      action="https://kwesforms.com/api/foreign/forms/jdRceC63fp3NJUksqUDV"
+      action="https://kwesforms.com/api/foreign/forms/1S09YWorOaq75jIP2ITZ"
     >
       <label for="email">
         Email
