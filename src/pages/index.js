@@ -26,8 +26,6 @@ import {
   home__projectsSkills,
   home__projectsButtonsContainer,
   home__projectsButtons,
-  home__contact,
-  home__contactImage,
 } from "./index.module.scss";
 
 const IndexPage = ({ data }) => {
@@ -76,13 +74,9 @@ const IndexPage = ({ data }) => {
               </a>
             </li>
             <li>
-              <a
-                href="mailto: orjuela9@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <Link to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} />
-              </a>
+              </Link>
             </li>
           </ul>
           <p className={home__heroCopy}>
