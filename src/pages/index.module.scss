@@ -1,10 +1,8 @@
-@mixin break($width) {
-  @media screen and (min-width: $width) {
-    @content;
-  }
-}
-
+@import '../mixin';
 .home {
+  &__buttons{
+    @include button;
+  }
   &__content-container {
     background-color: #fcdd5e;
   }
@@ -116,37 +114,25 @@
         }
       }
     }
-    &-card{
+    &-card {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 1em;
-      // box-shadow: 0px 0px 11px 5px rgba(235,235,235,1);
       border: 1px solid #202426;
     }
-    &-title{
+    &-title {
       text-decoration: none;
-
     }
-    &-buttons{
-      text-decoration: none;
-      color: #202426;
-      background-color: #fcdd5e;
-      flex-grow: 1;
-      padding: .3em;
-      text-align: center;
-      line-height: 1.2em;
-      &:hover{
-        background-color: #202426;
-        color: #fff;
-      }
-      &-container{
+    &-buttons {
+      @include button;
+      &-container {
         display: flex;
         justify-content: space-around;
-        gap: .3em;
+        gap: 0.3em;
         flex-direction: column;
-        @include break(786px){
+        @include break(786px) {
           flex-direction: row;
           gap: 1em;
         }
@@ -170,10 +156,10 @@
       }
     }
   }
-  &__contact{
+  &__contact {
     display: flex;
     gap: 2em;
-    & article{
+    & article {
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
@@ -181,10 +167,10 @@
       align-items: center;
       justify-content: center;
     }
-    &-image{
+    &-image {
       width: 40%;
     }
-    & label{
+    & label {
       display: flex;
       flex-direction: column;
     }

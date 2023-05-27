@@ -1,6 +1,7 @@
 import * as React from "react";
 import kwesforms from "kwesforms";
 import { useEffect } from "react";
+import {contactForm__button} from './ContactForm.module.scss';
 
 const ContactForm = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const ContactForm = () => {
         Message
         <textarea name="message" id="message" rows="15" />
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit" className={contactForm__button}>Submit</button>
     </form>
   );
 };

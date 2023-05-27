@@ -12,6 +12,7 @@ import {
 import { faFilePdf, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   home__section,
+  home__buttons,
   home__contentContainer,
   home__hero,
   home__heroText,
@@ -151,7 +152,7 @@ const IndexPage = ({ data }) => {
                   environment that values creativity and positive impact on
                   people's lives.
                 </p>
-                <Link to="/about">More about me</Link>
+                <Link to="/about" className={home__buttons}>More about me</Link>
               </article>
             </div>
           </article>
@@ -227,6 +228,7 @@ const IndexPage = ({ data }) => {
                 href="mailto: orjuela9@gmail.com"
                 target="_blank"
                 rel="noreferrer"
+                className={home__buttons}
               >
                 Send me an email
               </a>

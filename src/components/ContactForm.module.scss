@@ -1,0 +1,9 @@
+@import '../mixin';
+
+.contact-form{
+  &__button{
+    @include button;
+    width: 100%;
+    font-size: 1em;
+  }
+}

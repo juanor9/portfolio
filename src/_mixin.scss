@@ -1,0 +1,20 @@
+@mixin break($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+@mixin button {
+  text-decoration: none;
+  color: #202426;
+  background-color: #fcdd5e;
+  flex-grow: 1;
+  padding: 0.3em;
+  text-align: center;
+  line-height: 1.2em;
+  border: 0;
+  margin-top: 1em;
+  &:hover {
+    background-color: #202426;
+    color: #fff;
+  }
+}
