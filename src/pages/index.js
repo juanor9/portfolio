@@ -77,9 +77,13 @@ const IndexPage = ({ data }) => {
               </a>
             </li>
             <li>
-              <Link to="/contact">
+              <a
+                href="mailto: orjuela9@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faEnvelope} />
-              </Link>
+              </a>
             </li>
           </ul>
           <p className={home__heroCopy}>
@@ -152,7 +156,9 @@ const IndexPage = ({ data }) => {
                   environment that values creativity and positive impact on
                   people's lives.
                 </p>
-                <Link to="/about" className={home__buttons}>More about me</Link>
+                <Link to="/about" className={home__buttons}>
+                  More about me
+                </Link>
               </article>
             </div>
           </article>
@@ -210,9 +216,7 @@ const IndexPage = ({ data }) => {
         </section>
         <section className={home__section}>
           <h2>Contact</h2>
-          <div 
-          className={home__contact}
-          >
+          <div className={home__contact}>
             <article>
               <StaticImage
                 className={home__contactImage}
@@ -235,7 +239,7 @@ const IndexPage = ({ data }) => {
             </article>
             <article>
               <p>Or... you could just use this form to start a conversation.</p>
-              <ContactForm/>
+              <ContactForm />
             </article>
           </div>
         </section>

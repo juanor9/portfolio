@@ -158,14 +158,21 @@
   }
   &__contact {
     display: flex;
+    flex-direction: column;
     gap: 2em;
+    @include break(768px){
+      flex-direction: row;
+    }
     & article {
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
-      width: calc(50% - 1em);
+      width: 100%;
       align-items: center;
       justify-content: center;
+      @include break(768px){
+        width: calc(50% - 1em);
+      }
     }
     &-image {
       width: 40%;
