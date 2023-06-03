@@ -1,7 +1,7 @@
 import * as React from "react";
 import kwesforms from "kwesforms";
 import { useEffect } from "react";
-import {contactForm__button} from './ContactForm.module.scss';
+import {contactForm__button, contactForm__label} from './ContactForm.module.scss';
 
 const ContactForm = () => {
   useEffect(() => {
@@ -16,11 +16,11 @@ const ContactForm = () => {
       className="kwes-form"
       action="https://kwesforms.com/api/foreign/forms/1S09YWorOaq75jIP2ITZ"
     >
-      <label htmlFor="email">
+      <label htmlFor="email" className={contactForm__label}>
         Email
         <input name="email" id="email" type="email" />
       </label>
-      <label htmlFor="message">
+      <label htmlFor="message" className={contactForm__label}>
         Message
         <textarea name="message" id="message" rows="15" />
       </label>

@@ -6,4 +6,8 @@
     width: 100%;
     font-size: 1em;
   }
+  &__label{
+    display: flex;
+    flex-direction: column;
+  }
 }
