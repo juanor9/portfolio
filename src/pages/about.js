@@ -6,16 +6,67 @@ const AboutPage = () => {
     <Layout>
       <section>
         <h2>About me</h2>
-        <p>Hace unos años, mientras aún estaba en el colegio, me adentré en el fascinante mundo del desarrollo web. Mientras mis compañeros de clase aprendían los fundamentos de HTML y CSS, yo ya estaba explorando selectores más complejos y creando diseños únicos. Recuerdo cómo mi maestro, sin saberlo, a menudo me pedía que le enseñara cómo lograr ciertos efectos. Ese fue el momento en el que supe que el desarrollo web sería mi pasión.
+        <p>
+          Hey there! Let me take you on a journey through my path into the world
+          of web development.
+        </p>
+        <h3>🌟 My Story:</h3>
+        <p>
+          It all started with creating Hotmail community pages for my favorite
+          anime series during school. I quickly grasped HTML and CSS, surpassing
+          my teacher's knowledge and teaching him some advanced CSS tricks.
+        </p>
 
-Lo que me motiva cada día es la posibilidad de crear experiencias altamente funcionales que faciliten el acceso a servicios de calidad. Mi verdadero amor está en el diseño. No solo quiero que las cosas funcionen bien, sino que deseo que el acto de usarlas sea una experiencia estética y agradable.
+        <p>
+          In college, my passion for web development grew. I delved deeper into
+          HTML and CSS, constantly challenging myself. During my BA research
+          thesis, I realized the need for better data analysis and started
+          learning Python.
+        </p>
 
-Mis valores fundamentales como desarrollador web se centran en la funcionalidad, la belleza, la rapidez y la capacidad de responder a necesidades concretas. Busco combinar estos elementos en cada proyecto que emprendo.
+        <p>
+          After college, I worked as a copywriter for Mc.Graw-Hill Education
+          online platforms. My CSS skills allowed me to create polished content.
+          This experience inspired me to pursue web development full-time,
+          focusing on the MERN stack.
+        </p>
 
-Uno de mis logros más significativos hasta ahora ha sido el desarrollo de un MVP de gestión de inventarios para editoriales independientes. Este proyecto en curso combina mis dos pasiones: el desarrollo web y la producción editorial. Me llena de satisfacción poder contribuir a mejorar los procesos de estas editoriales y ayudarlas a alcanzar sus objetivos.
+        <h3>💻 As Developer:</h3>
+        <p>
+          As a versatile developer, I'm proficient in JavaScript, TypeScript,
+          Python, HTML, CSS, SASS, React.js, Node.js, Express.js, Redux Toolkit,
+          auth0, Gatsby, Django, MySQL, MongoDB, Mongoose, GraphQL, SQLite,
+          WordPress, Git, GitHub, Jira, and Scrum.
+        </p>
 
-En resumen, soy una persona motivada y trabajadora que se deleita en aprender constantemente y mantenerse actualizada en las últimas tecnologías. Mi mayor satisfacción radica en ayudar a las personas a alcanzar sus objetivos, sin importar cuán grandes o pequeños sean.</p>
-        </section>
+        <p>
+          I've developed some projects, including a hotel booking website
+          and an inventory solution for publishing houses. I love both frontend
+          and backend development, specializing in creating visually appealing
+          user interfaces and organizing data with API REST.
+        </p>
+
+        <h3>🎨 As A Person:</h3>
+        <p>
+          Beyond coding, I have a diverse background in copywriting, publishing,
+          and teaching Japanese. I enjoy illustration, graphic design, anime,
+          manga, video games, calligraphy, and astrology. If you're interested
+          in any of these topics you can contact me too. Communication,
+          responsibility, creativity, and aesthetics are my strengths..
+        </p>
+
+        <h3> 🤝As A Colleague:</h3>
+        <p>
+          I'm reliable, accountable, and a team player. I've led teams for
+          schoolbook projects, collaborating with writers, readers, and
+          designers. Open communication and respect for diverse perspectives are
+          vital to me.
+        </p>
+        <p>
+          Feel free to reach out for more info. Let's bring web experiences to
+          life together!
+        </p>
+      </section>
     </Layout>
   );
 };
