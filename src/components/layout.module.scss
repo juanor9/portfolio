@@ -83,9 +83,13 @@ body {
     padding: 0 6em;
   }
   &__content {
+    box-sizing: border-box;
     background-color: #fff;
     padding: 1em 2em;
     min-height: 100vh;
+    @include break(768px){
+      padding: 1em 5em;
+    }
   }
 }
 footer {
