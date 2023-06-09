@@ -1,4 +1,4 @@
-@import '../mixin';
+@import '../mixin.scss';
 .home {
   &__buttons{
     @include button;
@@ -139,21 +139,7 @@
       }
     }
     &-skills {
-      font-size: 0.7em;
-      display: flex;
-      list-style: none;
-      padding: 0;
-      flex-wrap: wrap;
-      gap: 0.8em;
-      justify-content: left;
-      @include break(768px) {
-        font-size: 0.8em;
-      }
-      & li {
-        background-color: #202426;
-        padding: 0.3em;
-        color: #fff;
-      }
+      @include skills;
     }
   }
   &__contact {
