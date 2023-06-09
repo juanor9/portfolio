@@ -16,7 +16,6 @@ import {
 } from "./index.module.scss";
 
 const ProjectsPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <h2>Projects</h2>
