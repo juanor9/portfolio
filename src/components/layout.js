@@ -13,7 +13,11 @@ const Layout = ({ children }) => {
     <div>
       <header className={header}>
         <div>
-          <h1><Link to="/" className={header__homeLink}>Juan Camilo Orjuela</Link></h1>
+          <h1>
+            <Link to="/" className={header__homeLink}>
+              Juan Camilo Orjuela
+            </Link>
+          </h1>
         </div>
         <nav>
           <ul className={header__navbar}>
@@ -50,6 +54,20 @@ const Layout = ({ children }) => {
             </li>
             <li>
               <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>Social Media</p>
+          <ul>
+            <li>
+              <Link to="/">GitHub</Link>
+            </li>
+            <li>
+              <Link to="/">Linkedin</Link>
+            </li>
+            <li>
+              <Link to="/">Behance</Link>
             </li>
           </ul>
         </section>

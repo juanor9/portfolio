@@ -5,6 +5,7 @@ import { header,
   header__homeLink,
  } from "./layout.module.scss";
 
+
 const HomeLayout = ({ children }) => {
   
   return (
