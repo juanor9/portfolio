@@ -1,5 +1,5 @@
 import * as React from "react";
-import HomeLayout from "../../components/homeLayout";
+import HomeLayout from "../../components/es/homeLayout";
 import ContactForm from "../../components/ContactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -276,4 +276,4 @@ export const query = graphql`
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Inicio</title>;

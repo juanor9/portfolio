@@ -52,7 +52,7 @@ const AboutPage = () => {
           and teaching Japanese. I enjoy illustration, graphic design, anime,
           manga, video games, calligraphy, and astrology. If you're interested
           in any of these topics you can contact me too. Communication,
-          responsibility, creativity, and aesthetics are my strengths..
+          responsibility, creativity, and aesthetics are my strengths.
         </p>
 
         <h3> 🤝As A Colleague:</h3>
