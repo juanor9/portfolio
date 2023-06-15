@@ -46,7 +46,7 @@ const HomeLayout = ({ children }) => {
               <Link to={`${esPath}/about`}>Sobre mí</Link>
             </li>
             <li>
-              <Link  to={`${esPath}/projects`}>Proyectos</Link>
+              <Link  to={`/projects${esPath}`}>Proyectos</Link>
             </li>
             <li>
               <Link to={`${esPath}/contact`}>Contacto</Link>

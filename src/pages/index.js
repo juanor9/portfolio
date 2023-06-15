@@ -250,27 +250,30 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC } }, limit: 4) {
-      nodes {
-        id
-        frontmatter {
-          date(formatString: "DD, MMMM, YYYY")
-          github_link
-          link
-          main_image {
-            childImageSharp {
-              gatsbyImageData
-            }
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    limit: 4
+    filter: {frontmatter: {lang: {eq: "en"}}}
+  ) {
+    nodes {
+      id
+      frontmatter {
+        date(formatString: "DD, MMMM, YYYY")
+        github_link
+        link
+        main_image {
+          childImageSharp {
+            gatsbyImageData
           }
-          short_intro
-          skills
-          slug
-
-          title
         }
+        short_intro
+        skills
+        slug
+        title
       }
     }
   }
+}
 `;
 
 export default IndexPage;

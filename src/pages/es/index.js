@@ -1,6 +1,6 @@
 import * as React from "react";
 import HomeLayout from "../../components/es/homeLayout";
-import ContactForm from "../../components/ContactForm";
+import ContactForm from "../../components/es/ContactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -251,27 +251,30 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC } }, limit: 4) {
-      nodes {
-        id
-        frontmatter {
-          date(formatString: "DD, MMMM, YYYY")
-          github_link
-          link
-          main_image {
-            childImageSharp {
-              gatsbyImageData
-            }
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    limit: 4
+    filter: {frontmatter: {lang: {eq: "es"}}}
+  ) {
+    nodes {
+      id
+      frontmatter {
+        date(formatString: "DD, MMMM, YYYY")
+        github_link
+        link
+        main_image {
+          childImageSharp {
+            gatsbyImageData
           }
-          short_intro
-          skills
-          slug
-
-          title
         }
+        short_intro
+        skills
+        slug
+        title
       }
     }
   }
+}
 `;
 
 export default IndexPage;

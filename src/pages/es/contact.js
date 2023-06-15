@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../../components/es/layout";
-import ContactForm from "../../components/ContactForm";
+import ContactForm from "../../components/es/ContactForm";
 
 const ContactPage = () => {
   return (
@@ -8,8 +8,7 @@ const ContactPage = () => {
       <section>
         <h2>Contacto</h2>
         <p>
-          Reach out to me and let's chat! Looking forward to connecting with
-          you. 😊
+          ¡Escríbeme y charlemos! Estaré feliz de responderte. 😊
         </p>
         <ContactForm />
       </section>
@@ -19,4 +18,4 @@ const ContactPage = () => {
 
 export default ContactPage;
 
-export const Head = () => <title>Contact</title>;
+export const Head = () => <title>Contacto</title>;
