@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../../../components/layout";
+import Layout from "../../../components/es/layout";
 // import Seo from '../../components/seo'
 import {
   Link,
@@ -54,26 +54,29 @@ const ProjectsPage = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC } }) {
-      nodes {
-        excerpt
-        id
-        frontmatter {
-          date(formatString: "DD, MMMM, YYYY")
-          link
-          main_image {
-            childImageSharp {
-              gatsbyImageData
-            }
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {lang: {eq: "es"}}}
+  ) {
+    nodes {
+      excerpt
+      id
+      frontmatter {
+        date(formatString: "DD, MMMM, YYYY")
+        link
+        main_image {
+          childImageSharp {
+            gatsbyImageData
           }
-          short_intro
-          skills
-          slug
-          title
         }
+        short_intro
+        skills
+        slug
+        title
       }
     }
   }
+}
 `;
 
 export const Head = () => <title>Home Page</title>;

@@ -12,13 +12,9 @@ const Layout = ({ children }) => {
   const esPath ="/es"
   return (
     <div>
-      <header className={header}>
+     <header className={header}>
         <div>
-          <h1>
-            <Link to={`${esPath}/`} className={header__homeLink}>
-              Juan Camilo Orjuela
-            </Link>
-          </h1>
+          <h1><Link to={`${esPath}/`} className={header__homeLink}>Juan Camilo Orjuela</Link></h1>
         </div>
         <nav>
           <ul className={header__navbar}>
@@ -26,7 +22,7 @@ const Layout = ({ children }) => {
               <Link to={`${esPath}/about`}>Sobre mí</Link>
             </li>
             <li>
-              <Link to={`/projects${esPath}`}>Proyectos</Link>
+              <Link  to={`/projects${esPath}`}>Proyectos</Link>
             </li>
             <li>
               <Link to={`${esPath}/contact`}>Contacto</Link>
@@ -51,7 +47,7 @@ const Layout = ({ children }) => {
               <Link to={`${esPath}/about`}>Sobre mí</Link>
             </li>
             <li>
-              <Link  to={`${esPath}/projects`}>Proyectos</Link>
+              <Link  to={`/projects${esPath}`}>Proyectos</Link>
             </li>
             <li>
               <Link to={`${esPath}/contact`}>Contacto</Link>
