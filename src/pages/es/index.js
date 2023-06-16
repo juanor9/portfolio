@@ -1,6 +1,6 @@
 import * as React from "react";
-import HomeLayout from "../components/homeLayout";
-import ContactForm from "../components/ContactForm";
+import HomeLayout from "../../components/es/homeLayout";
+import ContactForm from "../../components/es/ContactForm";
 import { Link, graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,7 +29,7 @@ import {
   home__projectsButtons,
   home__contact,
   home__contactImage,
-} from "./index.module.scss";
+} from "../index.module.scss";
 
 const IndexPage = ({ data }) => {
   return (
@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
       <section className={`${home__section} ${home__hero}`}>
         <div className={home__heroText}>
           <p className={home__heroIntro}>
-            Hi, I'm Juan Camilo Orjuela, web developer.
+            Hola, soy Juan Camilo Orjuela, desarrollador web.
           </p>
           <ul className={home__heroLinkList}>
             <li>
@@ -87,24 +87,24 @@ const IndexPage = ({ data }) => {
             </li>
           </ul>
           <p className={home__heroCopy}>
-            Web Developer, specializing in front-end and passionate about
-            creativity and design 🎨. I thrive on creating captivating web
-            experiences and collaborating with a team 🤝. Ready to craft new web
-            experiences! 💻✨
+            Desarrollador web, especializado en front-end y apasionado de la
+            creatividad y el diseño 🎨. Me encanta crear experiencias web
+            cautivadoras y colaborar con un equipo 🤝. ¡Listo para crear nuevas
+            experiencias web! 💻✨
           </p>
         </div>
         <div>
           <StaticImage
             layout="constrained"
             alt="Web developer illustration"
-            src="../images/portfolio-hero.svg"
+            src="../../images/portfolio-hero.svg"
             placeholder="rgba(180, 180, 180, 0.7)"
           />
         </div>
       </section>
       <div className={home__contentContainer}>
         <section className={home__section}>
-          <h2>My Skills</h2>
+          <h2>Habilidades</h2>
           <article className={home__skills}>
             <div className={home__skillsPicture}>
               <StaticImage
@@ -141,30 +141,31 @@ const IndexPage = ({ data }) => {
               </ul>
               <article>
                 <h3>
-                  Building Technological Connections: My Passion as Web
-                  Developer
+                  Construir conexiones tecnológicas: Mi pasión como
+                  desarrollador web
                 </h3>
                 <p>
-                  Imagine a world where technology becomes a transformative
-                  experience. As a web developer, I dive into this captivating
-                  world. My focus on front-end development and my ability to
-                  merge aesthetics and functionality elevate every project. But
-                  beyond my technical skills, my motivation lies in being part
-                  of a collaborative team where we overcome challenges and bring
-                  innovative ideas to life. I am always ready to learn and adapt
-                  to the latest trends, seeking personal growth in an
-                  environment that values creativity and positive impact on
-                  people's lives.
+                  Imagina un mundo en el que la tecnología se convierte en una
+                  experiencia transformadora. Como desarrollador web, me sumerjo
+                  en este cautivador mundo. Mi enfoque en el desarrollo
+                  front-end y mi habilidad para fusionar estética y
+                  funcionalidad elevan cada proyecto a un nuevo nivel. Pero más
+                  allá de mis habilidades técnicas, mi motivación reside en
+                  formar parte de un equipo colaborativo en el que superemos
+                  retos y demos vida a ideas innovadoras. Siempre estoy
+                  dispuesto a aprender y adaptarme a las últimas tendencias,
+                  buscando el crecimiento personal en un entorno que valora la
+                  creatividad y el impacto positivo en la vida de las personas.
                 </p>
                 <Link to="/about" className={home__buttons}>
-                  More about me
+                Más sobre mí
                 </Link>
               </article>
             </div>
           </article>
         </section>
         <section className={home__section}>
-          <h2>Projects</h2>
+          <h2>Proyectos</h2>
           <article className={home__projectsContainer}>
             {data.allMdx.nodes.map((node) => {
               const image = getImage(node.frontmatter.main_image);
@@ -188,7 +189,7 @@ const IndexPage = ({ data }) => {
                         to={`/projects/${node.frontmatter.slug}`}
                         className={home__projectsButtons}
                       >
-                        Know more
+                        Más información
                       </Link>
                       <a
                         className={home__projectsButtons}
@@ -204,10 +205,10 @@ const IndexPage = ({ data }) => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        GitHub repository
+                        Repositorio de GitHub
                       </a>
                     </p>
-                    <p>Posted: {node.frontmatter.date}</p>
+                    <p>Fecha: {node.frontmatter.date}</p>
                   </div>
                 </article>
               );
@@ -215,18 +216,18 @@ const IndexPage = ({ data }) => {
           </article>
         </section>
         <section className={home__section}>
-          <h2>Contact</h2>
+          <h2>Contacto</h2>
           <div className={home__contact}>
             <article>
               <StaticImage
                 className={home__contactImage}
                 layout="constrained"
                 alt="Coffee cup"
-                src="../images/coffee.svg"
+                src="../../images/coffee.svg"
               />
               <p>
-                Reach out to me and let's chat! Looking forward to connecting
-                with you. 😊
+              Ponte en contacto y charlemos. Estoy deseando conectar
+                contigo. 😊
               </p>
               <a
                 href="mailto: orjuela9@gmail.com"
@@ -234,11 +235,11 @@ const IndexPage = ({ data }) => {
                 rel="noreferrer"
                 className={home__buttons}
               >
-                Send me an email
+                Envíame un correo electrónico
               </a>
             </article>
             <article>
-              <p>Or... you could just use this form to start a conversation.</p>
+              <p>O... puedes utilizar este formulario para iniciar una conversación.</p>
               <ContactForm />
             </article>
           </div>
@@ -253,7 +254,7 @@ export const query = graphql`
   allMdx(
     sort: {frontmatter: {date: DESC}}
     limit: 4
-    filter: {frontmatter: {lang: {eq: "en"}}}
+    filter: {frontmatter: {lang: {eq: "es"}}}
   ) {
     nodes {
       id
@@ -278,4 +279,4 @@ export const query = graphql`
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Inicio</title>;
