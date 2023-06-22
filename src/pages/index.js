@@ -190,14 +190,17 @@ const IndexPage = ({ data }) => {
                       >
                         Know more
                       </Link>
-                      <a
-                        className={home__projectsButtons}
-                        href={node.frontmatter.link}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Live demo
-                      </a>{" "}
+                      {node.frontmatter.link ? (
+                        <a
+                          className={home__projectsButtons}
+                          href={node.frontmatter.link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Live demo
+                        </a>
+                      ) : null}
+
                       <a
                         className={home__projectsButtons}
                         href={node.frontmatter.github_link}
@@ -250,30 +253,30 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-  allMdx(
-    sort: {frontmatter: {date: DESC}}
-    limit: 4
-    filter: {frontmatter: {lang: {eq: "en"}}}
-  ) {
-    nodes {
-      id
-      frontmatter {
-        date(formatString: "DD, MMMM, YYYY")
-        github_link
-        link
-        main_image {
-          childImageSharp {
-            gatsbyImageData
+    allMdx(
+      sort: { frontmatter: { date: DESC } }
+      limit: 4
+      filter: { frontmatter: { lang: { eq: "en" } } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          date(formatString: "DD, MMMM, YYYY")
+          github_link
+          link
+          main_image {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
+          short_intro
+          skills
+          slug
+          title
         }
-        short_intro
-        skills
-        slug
-        title
       }
     }
   }
-}
 `;
 
 export default IndexPage;
