@@ -26,15 +26,15 @@ module.exports = {
         path: `${__dirname}/projects`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-        prefixDefault: false,
-        pagesPaths: [`${__dirname}/src/pages`, `${__dirname}/projects`],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-i18n',
+    //   options: {
+    //     langKeyDefault: 'en',
+    //     useLangKeyLayout: false,
+    //     prefixDefault: false,
+    //     pagesPaths: [`${__dirname}/src/pages`, `${__dirname}/projects`],
+    //   },
+    // },
     
   ],
 };
