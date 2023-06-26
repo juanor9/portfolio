@@ -16,6 +16,7 @@ import {
 } from "./index.module.scss";
 
 const ProjectsPage = ({ data }) => {
+  console.log("🚀 ~ file: index.js:19 ~ ProjectsPage ~ data:", data)
   return (
     <Layout>
       <h2>Projects</h2>
