@@ -7,7 +7,7 @@ const Seo = ({ title }) => {
       site {
         siteMetadata {
           title
-          siteUrl
+          # siteUrl
         }
       }
     }
@@ -29,7 +29,7 @@ const Seo = ({ title }) => {
       <meta name="author" content="Juan Orjuela" />
       <meta name="language" content="en" />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={siteUrl} />
+      {/* <link rel="canonical" href={siteUrl} /> */}
     </>
   );
 };
