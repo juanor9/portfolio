@@ -12,6 +12,14 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.juan-dev.co/',
+        sitemap: 'https://www.juan-dev.co/sitemap-0.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
