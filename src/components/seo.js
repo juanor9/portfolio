@@ -31,6 +31,12 @@ const Seo = ({ title }) => {
       <meta name="robots" content="index, follow" />
       <meta name="robots" content="all" />
       <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600&display=swap"
+        rel="stylesheet"
+      />
     </>
   );
 };
