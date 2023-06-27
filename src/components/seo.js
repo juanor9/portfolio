@@ -7,7 +7,7 @@ const Seo = ({ title }) => {
       site {
         siteMetadata {
           title
-          # siteUrl
+          siteUrl
         }
       }
     }
