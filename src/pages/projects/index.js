@@ -14,6 +14,7 @@ import {
   project__cardSkills,
   project__cardButton,
 } from "./index.module.scss";
+import Seo from "../../components/seo";
 
 const ProjectsPage = ({ data }) => {
   return (
@@ -76,6 +77,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <Seo title="Projects" />
 
 export default ProjectsPage;

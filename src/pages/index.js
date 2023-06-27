@@ -30,6 +30,7 @@ import {
   home__contact,
   home__contactImage,
 } from "./index.module.scss";
+import Seo from "../components/seo";
 
 const IndexPage = ({ data }) => {
   return (
@@ -281,4 +282,4 @@ export const query = graphql`
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <Seo title="Home Page" />

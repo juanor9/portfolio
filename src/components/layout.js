@@ -61,13 +61,31 @@ const Layout = ({ children }) => {
           <p>Social Media</p>
           <ul>
             <li>
-              <Link to="/">GitHub</Link>
+              <a
+                href="https://github.com/juanor9"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
             </li>
             <li>
-              <Link to="/">Linkedin</Link>
+              <a
+                href="https://www.linkedin.com/in/juan-orjuela/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
             </li>
             <li>
-              <Link to="/">Behance</Link>
+              <a
+                href="https://www.behance.net/juan_o"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Behance
+              </a>
             </li>
           </ul>
         </section>
