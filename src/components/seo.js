@@ -19,7 +19,7 @@ const Seo = ({ title }) => {
       </title>
       <meta
         name="description"
-        content="I'm Juan Orjuela, a passionate front-end web developer specializing in the MERN stack. I offer full-stack development and UI/UX design services with a focus on responsibility, creativity, and excellent graphic design."
+        content="I'm Juan Orjuela, a passionate front-end web developer specializing in the MERN stack. Offering full-stack development and UI/UX design services."
       />
       <meta
         name="keywords"
