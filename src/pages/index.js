@@ -101,12 +101,6 @@ const IndexPage = ({ data }) => {
         </div>
         <div>
           <StaticImage
-            srcset="https://res.cloudinary.com/dzevguevc/image/upload/c_scale,w_290/v1687904081/Portfolio/portfolio-hero_kvfmur.png 290w,
-                    https://res.cloudinary.com/dzevguevc/image/upload/c_scale,w_475/v1687904081/Portfolio/portfolio-hero_kvfmur.png 475w,
-                    https://res.cloudinary.com/dzevguevc/image/upload/c_scale,w_600/v1687904081/Portfolio/portfolio-hero_kvfmur.png 600w"
-            sizes="(max-width: 320px) 290px,
-                    (max-width: 768px) 475px,
-                    800px"
             layout="constrained"
             alt="Web developer illustration"
             src="https://res.cloudinary.com/dzevguevc/image/upload/v1687904081/Portfolio/portfolio-hero_kvfmur.png"

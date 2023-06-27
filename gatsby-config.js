@@ -25,7 +25,16 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `dominantColor`,
+          breakpoints: [320, 768, 1000],
+          backgroundColor: `transparent`,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-mdx",
     {
