@@ -101,9 +101,15 @@ const IndexPage = ({ data }) => {
         </div>
         <div>
           <StaticImage
+            srcset="https://res.cloudinary.com/dzevguevc/image/upload/c_scale,w_290/v1687904081/Portfolio/portfolio-hero_kvfmur.png 290w,
+                    https://res.cloudinary.com/dzevguevc/image/upload/c_scale,w_475/v1687904081/Portfolio/portfolio-hero_kvfmur.png 475w,
+                    https://res.cloudinary.com/dzevguevc/image/upload/c_scale,w_600/v1687904081/Portfolio/portfolio-hero_kvfmur.png 600w"
+            sizes="(max-width: 320px) 290px,
+                    (max-width: 768px) 475px,
+                    800px"
             layout="constrained"
             alt="Web developer illustration"
-            src="../images/portfolio-hero.svg"
+            src="https://res.cloudinary.com/dzevguevc/image/upload/v1687904081/Portfolio/portfolio-hero_kvfmur.png"
             placeholder="rgba(180, 180, 180, 0.7)"
             title="Homepage hero image"
           />
@@ -180,7 +186,11 @@ const IndexPage = ({ data }) => {
                 <article key={node.id} className={home__projectsCard}>
                   <div>
                     <h3>{node.frontmatter.title}</h3>
-                    <GatsbyImage image={image} alt={node.frontmatter.title} title={node.frontmatter.title} />
+                    <GatsbyImage
+                      image={image}
+                      alt={node.frontmatter.title}
+                      title={node.frontmatter.title}
+                    />
                     {node.frontmatter.skills ? (
                       <ul className={home__projectsSkills}>
                         {node.frontmatter.skills.map((skill, index) => (

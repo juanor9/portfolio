@@ -29,6 +29,7 @@ const Seo = ({ title }) => {
       <meta name="author" content="Juan Orjuela" />
       <meta name="language" content="en" />
       <meta name="robots" content="index, follow" />
+      <meta name="robots" content="all" />
       <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
     </>
   );

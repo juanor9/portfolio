@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Juan Orjuela Portfolio`,
+    title: `Juan Orjuela Web Developer Portfolio`,
     siteUrl: `https://www.juan-dev.co/`,
     description: `Juan Camilo Orjuela web developer portfolio`
   },
