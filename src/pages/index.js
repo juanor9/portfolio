@@ -100,6 +100,7 @@ const IndexPage = ({ data }) => {
             alt="Web developer illustration"
             src="../images/portfolio-hero.svg"
             placeholder="rgba(180, 180, 180, 0.7)"
+            title="Homepage hero image"
           />
         </div>
       </section>
@@ -174,7 +175,7 @@ const IndexPage = ({ data }) => {
                 <article key={node.id} className={home__projectsCard}>
                   <div>
                     <h3>{node.frontmatter.title}</h3>
-                    <GatsbyImage image={image} alt={node.frontmatter.title} />
+                    <GatsbyImage image={image} alt={node.frontmatter.title} title={node.frontmatter.title} />
                     {node.frontmatter.skills ? (
                       <ul className={home__projectsSkills}>
                         {node.frontmatter.skills.map((skill, index) => (
@@ -228,6 +229,7 @@ const IndexPage = ({ data }) => {
                 layout="constrained"
                 alt="Coffee cup"
                 src="../images/coffee.svg"
+                title="coffee cup"
               />
               <p>
                 Reach out to me and let's chat! Looking forward to connecting
