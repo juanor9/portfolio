@@ -46,6 +46,7 @@ const IndexPage = ({ data }) => {
                 href="https://github.com/juanor9"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Visit my GitHub profile"
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
@@ -55,6 +56,7 @@ const IndexPage = ({ data }) => {
                 href="https://www.linkedin.com/in/juan-orjuela/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Visit my LinkedIn profile"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
@@ -64,6 +66,7 @@ const IndexPage = ({ data }) => {
                 href="https://www.behance.net/juan_o"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Visit my Behance profile"
               >
                 <FontAwesomeIcon icon={faBehance} />
               </a>
@@ -73,6 +76,7 @@ const IndexPage = ({ data }) => {
                 href="https://res.cloudinary.com/dzevguevc/image/upload/v1684151725/Juan_Camilo_Orjuela_en_j342cs.pdf"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Download my CV"
               >
                 <FontAwesomeIcon icon={faFilePdf} />
               </a>
@@ -82,6 +86,7 @@ const IndexPage = ({ data }) => {
                 href="mailto: orjuela9@gmail.com"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Send me an email"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
