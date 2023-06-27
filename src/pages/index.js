@@ -282,4 +282,9 @@ export const query = graphql`
 
 export default IndexPage;
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => (
+  <>
+    <Seo title="Home Page" />
+    <html lang="en" />
+  </>
+);
