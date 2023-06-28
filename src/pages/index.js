@@ -116,7 +116,7 @@ const IndexPage = ({ data }) => {
             <div className={home__skillsPicture}>
               <StaticImage
                 alt="Juan Camilo Orjuela"
-                src="https://res.cloudinary.com/dzevguevc/image/upload/v1687904081/Portfolio/portfolio-hero_kvfmur.png"
+                src="https://res.cloudinary.com/dzevguevc/image/upload/v1684179459/Portfolio/IMG_4997_chhb5r.jpg"
                 placeholder="#fff"
                 title="Juan Camilo Orjuela"
               />
