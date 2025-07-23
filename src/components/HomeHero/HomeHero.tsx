@@ -1,5 +1,6 @@
 import * as React from "react";
 import PrimaryButton from "../ui/PrimaryButton/PrimaryButton";
+import StackButtons from "../StackButtons/StackButtons";
 import "./HomeHero.scss"
 
 const HomeHero = () => {
@@ -13,7 +14,7 @@ const HomeHero = () => {
       <div className="home-hero__content">
         <h1 className="home-hero__title">Juan Camilo Orjuela</h1>
         <h2 className="home-hero__subtitle">Front-end Developer</h2>
-        <div>Stack</div>
+        <StackButtons/>
         <p className="home-hero__description">Desarrollador Front-End enfocado en accesibilidad, diseño limpio y código sostenible.</p>
         <ul className="home-hero__links">
           <li className="home-hero__link">
