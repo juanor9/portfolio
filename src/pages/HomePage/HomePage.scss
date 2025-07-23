@@ -1,0 +1,6 @@
+@use '../../styles/global/forwards' as *;
+
+.home-page{
+  background-color: $yellow;
+  min-height: 100vh;
+}

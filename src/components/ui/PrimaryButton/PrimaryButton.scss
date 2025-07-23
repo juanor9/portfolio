@@ -1,0 +1,15 @@
+@use '../../../styles/global/forwards' as *;
+
+.primary-button {
+  background-color: $yellow;
+  padding: 0.5rem 1rem;
+  color: $yellow-900;
+  flex-grow: 1;
+}
+
+.fullwidth {
+    background-color: $yellow;
+    padding: 0.5rem 1rem;
+    color: $yellow-900;
+    width: 100%;
+  }
