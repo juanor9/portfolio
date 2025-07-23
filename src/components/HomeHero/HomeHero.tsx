@@ -13,16 +13,17 @@ const HomeHero = () => {
       <div className="home-hero__content">
         <h1 className="home-hero__title">Juan Camilo Orjuela</h1>
         <h2 className="home-hero__subtitle">Front-end Developer</h2>
-        <p className="home-hero__description">Desarrollador Front-End enfocado en accesibilidad, diseño limpio y código mantenible.</p>
+        <div>Stack</div>
+        <p className="home-hero__description">Desarrollador Front-End enfocado en accesibilidad, diseño limpio y código sostenible.</p>
         <ul className="home-hero__links">
           <li className="home-hero__link">
-            <PrimaryButton text="Ver proyectos" to="/projects" _isLink={true} />
+            <PrimaryButton text="Ver proyectos" to="/projects" _isLink={true} _isDisabled={true} />
             </li>
           <li className="home-hero__link">
-            <PrimaryButton text="Contactarme" to="/contact" _isLink={true}></PrimaryButton>
+            <PrimaryButton text="Contactarme" to="/contact" _isLink={true} _isDisabled={true}/>
             </li>
-          <li className="home-hero__link">
-            <PrimaryButton text="Descargar mi CV" to="/cv" _isLink={true}></PrimaryButton>
+          <li className="home-hero__link--fullwidth">
+            <PrimaryButton text="Descargar mi CV" to="/cv" _isLink={true} _isDisabled={true}/>
             </li>
         </ul>
       </div>

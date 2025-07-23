@@ -37,7 +37,11 @@ const PrimaryButton = (
     )
   }
   return (
-    <button type="button" className={buttonClasses}>
+    <button 
+    type="button" 
+    className={buttonClasses} 
+    {...(_isDisabled && { disabled: true, tabIndex: -1 })}
+    >
       {children}
       {text}
     </button>

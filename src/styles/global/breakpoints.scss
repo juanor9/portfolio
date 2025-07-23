@@ -1,0 +1,24 @@
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+$wide: 1920px;
+
+$breakpoints: (
+  mobile: 0,
+  tablet: $tablet,
+  laptop: $laptop,
+  desktop: $desktop,
+  wide: $wide
+);
+
+@mixin breakpoint($key) {
+  $value: map-get($breakpoints, $key);
+
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "🚫 El breakpoint `#{$key}` no está definido en `$breakpoints`.";
+  }
+}

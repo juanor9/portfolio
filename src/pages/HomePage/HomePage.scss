@@ -3,4 +3,34 @@
 .home-page{
   background-color: $yellow;
   min-height: 100vh;
+
+  &__scroll-button{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: $black;
+    color: $white;
+    border-radius: 50%;
+  }
+
+  &__content{
+    background-color: $white;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__footer{
+    background-color: $yellow;
+    text-align: center;
+    padding: 1rem;
+    
+  }
 }
