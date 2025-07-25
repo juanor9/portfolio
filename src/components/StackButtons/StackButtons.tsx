@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import clsx from "clsx";
 import "./StackButtons.scss";
 import { ReactComponent as ReactLogo } from "../../icons/react-logo.svg";
 import { ReactComponent as TypeScriptLogo } from "../../icons/typescript-logo.svg";
