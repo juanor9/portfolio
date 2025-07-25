@@ -1,23 +1,16 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import HomeHero from "../../components/HomeHero/HomeHero"
+import Skills from "../../components/Skills/Skills"
 import "./HomePage.scss"
 
 const HomePage: React.FC<PageProps> = () => {
   return (
     <>
-      <button
-        type="button"
-        className="home-page__scroll-button"
-      >
-        ↓
-      </button>
-      <main className="home-page">
+            <main className="home-page">
         <HomeHero />
         <section className="home-page__content">
-          <article>
-            <h3>Skills</h3>
-          </article>
+          <Skills/>
           <article>
             <h3>Projects</h3>
           </article>
@@ -34,6 +27,12 @@ const HomePage: React.FC<PageProps> = () => {
       <footer className="home-page__footer">
         Footer
       </footer>
+      <button
+        type="button"
+        className="home-page__scroll-button"
+      >
+        ↓
+      </button>
     </>
   )
 }

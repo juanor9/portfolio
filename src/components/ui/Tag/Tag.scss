@@ -1,0 +1,11 @@
+@use '../../../styles/global/forwards' as *;
+
+.tag{
+  display: inline-block;
+  background-color: $cloud-100;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 16px;
+  border: 1px solid $cloud-300;
+  color: $cloud-900;
+}
