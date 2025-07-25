@@ -5,25 +5,35 @@ import "./HomePage.scss"
 
 const HomePage: React.FC<PageProps> = () => {
   return (
-    <> 
-    <button 
-    type="button" 
-    className="home-page__scroll-button"
-    >
-      ↓
-    </button>
-    <main className="home-page">
-      <HomeHero />
-      <section className="home-page__content">
-        <article>Skills</article>
-        <article>Projects</article>
-        <article>Sobre mí</article>
-        <article>Contacto</article>
-      </section>
-    </main>
-    <footer className="home-page__footer">
-      Footer
-    </footer>
+    <>
+      <button
+        type="button"
+        className="home-page__scroll-button"
+      >
+        ↓
+      </button>
+      <main className="home-page">
+        <HomeHero />
+        <section className="home-page__content">
+          <article>
+            <h3>Skills</h3>
+          </article>
+          <article>
+            <h3>Projects</h3>
+          </article>
+          <div>
+            <article>
+              <h3>Sobre mí</h3>
+            </article>
+            <article>
+              <h3>Contacto</h3>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer className="home-page__footer">
+        Footer
+      </footer>
     </>
   )
 }
