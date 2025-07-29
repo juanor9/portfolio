@@ -44,9 +44,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       <div className="project-card__actions">
         <div role="group" className="project-card__buttons">
-          <Link to={`/projects/${documentId}`} className="primary-button fullwidth">Ver proyecto</Link>
           {github_repo
-            ? <Link to={github_repo} className="primary-button">Github</Link>
+            ? <Link to={github_repo} className="primary-button">Github Repo</Link>
             : null}
           {live_demo
             ? <Link to={live_demo} className="primary-button">Live Demo</Link>
