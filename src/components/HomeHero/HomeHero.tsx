@@ -24,7 +24,7 @@ const HomeHero = () => {
             <li className="home-hero__link">
               <PrimaryButton text="Contactarme" to="/contact" _isLink={true} />
             </li>
-            <li className="home-hero__link--fullwidth">
+            <li className="home-hero__link fullwidth">
               <a
                 href="/juan-camilo-orjuela-frontend-dev_cv.pdf"
                 className="primary-button"

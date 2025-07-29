@@ -2,18 +2,21 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import HomeHero from "../../components/HomeHero/HomeHero"
 import Skills from "../../components/Skills/Skills"
+import { useProjects } from "../../hooks/useProjects";
+import ProjectList from "../../components/ProjectsHome/ProjectsHome"
 import "./HomePage.scss"
 
 const HomePage: React.FC<PageProps> = () => {
+
+  const projects = useProjects();
+  
   return (
     <>
-            <main className="home-page">
+      <main className="home-page">
         <HomeHero />
         <section className="home-page__content">
-          <Skills/>
-          <article>
-            <h3>Projects</h3>
-          </article>
+          <Skills />
+          <ProjectList projects={projects} />
           <div>
             <article>
               <h3>Sobre mí</h3>
