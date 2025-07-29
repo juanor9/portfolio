@@ -1,8 +1,16 @@
 @use '../../../styles/global/forwards' as *;
 
 a.primary-button {
-  display: block;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  &.fullwidth {
   width: 100%;
+  flex-grow: 2;
+}
 }
 
 .primary-button {
@@ -35,3 +43,4 @@ a.primary-button {
     border: 2px solid rgba($white, 0.2);
   }
 }
+
