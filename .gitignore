@@ -2,8 +2,3 @@ node_modules/
 .cache/
 public
 src/gatsby-types.d.ts
-/.vscode
-/estructura.txt
-/package-lock.json
-/.env
-/.env.development
