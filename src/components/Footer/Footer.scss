@@ -1,7 +1,7 @@
 @use '../../styles/global/forwards' as *;
 
 .footer {
-  background-color:$yellow;
+  background-color: $yellow;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba($yellow, 0.2);

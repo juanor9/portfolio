@@ -16,13 +16,13 @@ const HomeHero = () => {
           <h1 className="home-hero__title">Juan Camilo Orjuela</h1>
           <h2 className="home-hero__subtitle">Front-end Developer</h2>
           <StackButtons />
-          <p className="home-hero__description">Desarrollador Front-End enfocado en accesibilidad, diseño limpio y código sostenible.</p>
+          <p className="home-hero__description">Front‑End developer focused on accessibility, clean design and sustainable code.</p>
           <ul className="home-hero__links">
             <li className="home-hero__link">
-              <PrimaryButton text="Ver proyectos" to="/projects" _isLink={true} />
+              <PrimaryButton text="Projects" to="/projects" _isLink={true} />
             </li>
             <li className="home-hero__link">
-              <PrimaryButton text="Contactarme" to="/contact" _isLink={true} />
+              <PrimaryButton text="Contact" to="/contact" _isLink={true} />
             </li>
             <li className="home-hero__link fullwidth">
               <a
@@ -32,7 +32,7 @@ const HomeHero = () => {
                 rel="noopener noreferrer"
                 download
               >
-                Descargar mi CV
+                Download my CV
               </a>
             </li>
           </ul>

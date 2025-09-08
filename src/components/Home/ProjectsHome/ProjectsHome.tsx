@@ -24,7 +24,7 @@ const ProjectsHome: React.FC<ProjectsHomeProps> = ({ projects }) => {
   console.log("🚀 ~ ProjectsHome ~ projects:", projects)
   return (
     <article className="projects-home">
-      <h3 className="projects-home__title">Proyectos</h3>
+      <h3 className="projects-home__title">Projects</h3>
 
       <div className="projects-home__container" role="list">
         {projects.map((project) => (

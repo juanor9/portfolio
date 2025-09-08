@@ -4,7 +4,7 @@ import "./Skills.scss";
 
 const Skills = () => {
   const skillsList = {
-    lenguajes: [
+    languages: [
       "JavaScript",
       "TypeScript"
     ],
@@ -20,10 +20,10 @@ const Skills = () => {
       "REST APIs",
       "GraphQL"
     ],
-    accesibilidad: [
+    Accessibility: [
       "WCAG 2.2",
       "EN 301 549",
-      "Refactorización para a11y"
+      "Refactor for a11y"
     ],
     testing: [
       "Jest",
@@ -33,29 +33,26 @@ const Skills = () => {
     CMS: [
       "Optimizely"
     ],
-    herramientas: [
+    Tools: [
       "Git",
       "ESLint",
       "Prettier",
       "Webpack",
       "Rollup"
     ],
-    "habilidades blandas": [
-      "Autonomía",
-      "Colaboración",
-      "Comunicación técnica",
-      "Adaptabilidad global",
-      "Ética profesional",
-      "Sensibilidad estética",
-      "Organización efectiva",
-      "Enfoque en accesibilidad",
+    "Soft Skills": [
+      "Autonomy",
+      "Collaboration",
+      "Effective Organization",
+      "Focus on usage",
+      "Focus on accessibility",
       
     ]
   };
 
   return (
     <article className="skills">
-      <h3 className="skills__title">Habilidades</h3>
+      <h3 className="skills__title">Skills</h3>
       <div className="skills__container">
       {Object.entries(skillsList).map(([category, skills]) => (
         <div key={category} className="skills__group">

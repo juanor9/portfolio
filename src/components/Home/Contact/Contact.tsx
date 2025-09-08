@@ -38,6 +38,10 @@ const Contact: React.FC = () => {
       const templateId = process.env.GATSBY_EMAIL_TEMPLATE_ID;
       const publicKey = process.env.GATSBY_EMAIL_PUBLIC_KEY;
 
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing');
+      }
+
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -61,11 +65,11 @@ const Contact: React.FC = () => {
 
   return (
     <section className="contact">
-      <h3 className="contact__title">Contacto</h3>
+      <h3 className="contact__title">Contact</h3>
       <div className="contact__container">
         <div className="contact__info">
           <p className="contact__description">
-            �Tienes un proyecto en mente? Me encantar�a escuchar sobre tu idea y c�mo podemos trabajar juntos para hacerla realidad.
+            Do you have a project in mind? I’d love to hear about your idea and how we can work together to make it a reality.
           </p>
           <div className="contact__details">
             <div className="contact__detail">
@@ -90,8 +94,8 @@ const Contact: React.FC = () => {
         
         <form className="contact__form" onSubmit={handleSubmit}>
           <div className="contact__field">
-            <label htmlFor="name" className="contact__label">
-              Nombre *
+            <label htmlFor="name" className="contact__form-label">
+              Name *
             </label>
             <input
               type="text"
@@ -106,7 +110,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="contact__field">
-            <label htmlFor="email" className="contact__label">
+            <label htmlFor="email" className="contact__form-label">
               Email *
             </label>
             <input
@@ -122,8 +126,8 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="contact__field">
-            <label htmlFor="message" className="contact__label">
-              Mensaje *
+            <label htmlFor="message" className="contact__form-label">
+              Message *
             </label>
             <textarea
               id="message"
@@ -131,7 +135,7 @@ const Contact: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               className="contact__textarea"
-              rows="5"
+              rows={5}
               required
               disabled={isSubmitting}
             />
