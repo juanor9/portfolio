@@ -7,3 +7,4 @@ src/gatsby-types.d.ts
 /package-lock.json
 /.env
 /.env.development
+/.claude

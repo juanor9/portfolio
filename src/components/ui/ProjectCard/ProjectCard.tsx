@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             ? <Link to={live_demo} className="primary-button">Live Demo</Link>
             : null}
         </div>
-        <small className="project-card__date">Creado: {new Date(createdAt).toLocaleDateString("es-CO")}</small>
+        <small className="project-card__date">Created: {new Date(createdAt).toLocaleDateString("es-CO")}</small>
       </div>
 
     </div>)
