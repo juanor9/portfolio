@@ -35,6 +35,16 @@
     }
   }
 
+  &__about-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+
   &__footer{
     background-color: $yellow;
     text-align: left;

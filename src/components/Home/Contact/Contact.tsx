@@ -71,25 +71,6 @@ const Contact: React.FC = () => {
           <p className="contact__description">
             Do you have a project in mind? I’d love to hear about your idea and how we can work together to make it a reality.
           </p>
-          <div className="contact__details">
-            <div className="contact__detail">
-              <span className="contact__label">Email:</span>
-              <a href="mailto:juan@example.com" className="contact__link">
-                juan@example.com
-              </a>
-            </div>
-            <div className="contact__detail">
-              <span className="contact__label">LinkedIn:</span>
-              <a 
-                href="https://linkedin.com/in/your-profile" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="contact__link"
-              >
-                /in/juan-orjuela
-              </a>
-            </div>
-          </div>
         </div>
         
         <form className="contact__form" onSubmit={handleSubmit}>

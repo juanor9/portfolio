@@ -20,7 +20,7 @@ const HomePage: React.FC<PageProps> = () => {
         <section className="home-page__content">
           <Skills />
           <ProjectsHome projects={projects} />
-          <div>
+          <div className="home-page__about-contact">
             <About />
             <Contact />
           </div>
