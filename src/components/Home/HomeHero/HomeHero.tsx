@@ -1,5 +1,5 @@
 import * as React from "react";
-import PrimaryButton from "../ui/PrimaryButton/PrimaryButton";
+import PrimaryButton from "../../ui/PrimaryButton/PrimaryButton";
 import StackButtons from "../StackButtons/StackButtons";
 import "./HomeHero.scss"
 

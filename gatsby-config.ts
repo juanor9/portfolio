@@ -32,7 +32,15 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-plugin-svgr',
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('sass'),
+        sassOptions: {
+          api: 'modern',
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

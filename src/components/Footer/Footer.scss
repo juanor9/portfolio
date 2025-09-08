@@ -1,0 +1,153 @@
+@use '../../styles/global/forwards' as *;
+
+.footer {
+  background-color:$yellow;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba($yellow, 0.2);
+  padding: 2rem 2rem 1rem;
+  margin-top: auto;
+
+  @include breakpoint(tablet) {
+    padding: 3rem 8rem 2rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding: 3rem 2rem 2rem;
+  }
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-family: 'Montserrat', 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $black;
+    text-transform: uppercase;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-family: 'Montserrat', 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $black;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  &__heading {
+    font-family: 'Montserrat', 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $black;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: 0.05em;
+  }
+
+  &__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:hover {
+      opacity: 1;
+      color: $blue;
+      transform: translateX(4px);
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: 2px solid $blue;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: $blue;
+      transition: width 0.2s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba($black, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.85rem;
+    color: $black;
+    opacity: 0.7;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  // Alternative yellow background version
+  &--yellow {
+    background-color: $yellow;
+    border-top: 1px solid rgba($black, 0.1);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  // Fully transparent version
+  &--transparent {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-top: 1px solid rgba($black, 0.1);
+  }
+}

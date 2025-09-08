@@ -10,6 +10,7 @@ interface PrimaryButtonProps {
   _isLink: boolean;
   _isFullWidth?: boolean
   _isDisabled?: boolean
+  type?: "button" | "submit"
 }
 
 const PrimaryButton = (
@@ -19,7 +20,8 @@ const PrimaryButton = (
     text,
     _isLink,
     _isFullWidth,
-    _isDisabled
+    _isDisabled,
+    type = "button"
   }: PrimaryButtonProps
 ) => {
 
@@ -38,7 +40,7 @@ const PrimaryButton = (
   }
   return (
     <button 
-    type="button" 
+    type={type} 
     className={buttonClasses} 
     {...(_isDisabled && { disabled: true, tabIndex: -1 })}
     >

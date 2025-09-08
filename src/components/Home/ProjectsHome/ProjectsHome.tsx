@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../ui/ProjectCard/ProjectCard";
+import ProjectCard from "../../ui/ProjectCard/ProjectCard";
 import "./ProjectsHome.scss";
 
 interface ProjectsFields {

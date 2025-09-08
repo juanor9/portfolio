@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import "./StackButtons.scss";
-import { ReactComponent as ReactLogo } from "../../icons/react-logo.svg";
-import { ReactComponent as TypeScriptLogo } from "../../icons/typescript-logo.svg";
-import { ReactComponent as SassLogo } from "../../icons/sass-logo.svg";
-import { ReactComponent as A11yLogo } from "../../icons/accessibility-logo.svg";
-import { ReactComponent as GraphQlLogo } from "../../icons/graphql-logo.svg";
+import { ReactComponent as ReactLogo } from "../../../icons/react-logo.svg";
+import { ReactComponent as TypeScriptLogo } from "../../../icons/typescript-logo.svg";
+import { ReactComponent as SassLogo } from "../../../icons/sass-logo.svg";
+import { ReactComponent as A11yLogo } from "../../../icons/accessibility-logo.svg";
+import { ReactComponent as GraphQlLogo } from "../../../icons/graphql-logo.svg";
 
 const StackButtons = () => {
   return (

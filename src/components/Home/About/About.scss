@@ -1,0 +1,7 @@
+@use '../../../styles/global/forwards' as *;
+
+.about {
+  &__title {
+    @include section-title;
+  }
+}

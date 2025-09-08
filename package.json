@@ -8,14 +8,15 @@
     "gatsby"
   ],
   "scripts": {
-    "dev": "gatsby develop",
-    "start": "gatsby develop",
+    "dev": "cross-env SASS_SILENCE_DEPRECATIONS=* gatsby develop",
+    "start": "cross-env SASS_SILENCE_DEPRECATIONS=* gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@mdx-js/react": "^2.3.0",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.1",
@@ -39,6 +40,7 @@
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "cross-env": "^10.0.0",
     "typescript": "^5.3.3"
   }
 }
