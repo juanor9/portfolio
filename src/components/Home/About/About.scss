@@ -1,6 +1,7 @@
 @use '../../../styles/global/forwards' as *;
 
 .about {
+  width: calc((100% - 1rem)/2);
   &__title {
     @include section-title;
   }

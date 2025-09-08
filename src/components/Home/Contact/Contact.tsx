@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
   const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim();
 
   return (
-    <section className="contact">
+    <article className="contact">
       <h3 className="contact__title">Contact</h3>
       <div className="contact__container">
         <div className="contact__info">
@@ -132,14 +132,14 @@ const Contact: React.FC = () => {
             <PrimaryButton
               _isLink={false}
               _isFullWidth={true}
-              _isDisabled={!isFormValid || isSubmitting}
+              _isDisabled={false}
               text={isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
               type="submit"
             />
           </div>
         </form>
       </div>
-    </section>
+    </article>
   );
 };
 
