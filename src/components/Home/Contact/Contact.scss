@@ -1,0 +1,160 @@
+@use '../../../styles/global/forwards' as *;
+
+.contact {
+  &__title {
+    @include section-title;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(laptop) {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__description {
+    @include body-regular;
+    color: $white;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  &__label {
+    @include body-regular;
+    color: $blue;
+    font-weight: 600;
+    min-width: 80px;
+  }
+
+  &__link {
+    @include body-regular;
+    color: $white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: 2px solid $yellow;
+      outline-offset: 2px;
+    }
+  }
+
+  &__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__input,
+  &__textarea {
+    @include body-regular;
+    padding: 0.75rem 1rem;
+    border: 2px solid $cloud-600;
+    background-color: $white;
+    color: $black;
+    border-radius: 4px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $blue;
+      @include elevation-low;
+    }
+
+    &:disabled {
+      background-color: $cloud-100;
+      color: $cloud-600;
+      cursor: not-allowed;
+    }
+
+    &::placeholder {
+      color: $cloud-500;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+  }
+
+  &__message {
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &--success {
+      background-color: rgba($yellow, 0.1);
+      color: $yellow;
+      border: 1px solid rgba($yellow, 0.3);
+    }
+
+    &--error {
+      background-color: rgba(#ff4444, 0.1);
+      color: #ff4444;
+      border: 1px solid rgba(#ff4444, 0.3);
+    }
+  }
+
+  &__submit {
+    margin-top: 0.5rem;
+  }
+}
+
+@include breakpoint(tablet) {
+  .contact {
+    &__container {
+      gap: 2.5rem;
+    }
+  }
+}
+
+@include breakpoint(laptop) {
+  .contact {
+    &__info {
+      max-width: 400px;
+    }
+
+    &__form {
+      max-width: 500px;
+    }
+  }
+}
