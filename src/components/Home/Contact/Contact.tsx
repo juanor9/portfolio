@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
               _isLink={false}
               _isFullWidth={true}
               _isDisabled={false}
-              text={isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+              text={isSubmitting ? 'Sending...' : 'Send Message'}
               type="submit"
             />
           </div>
